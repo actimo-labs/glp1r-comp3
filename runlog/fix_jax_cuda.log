@@ -1,0 +1,12 @@
+[04:31:33] pinning nvidia cu12 stack to the CUDA 12.3 / cuDNN 8.9 era that jaxlib 0.4.20 was built against
+[04:32:19] pip rc=0
+[04:32:19] === verify ===
+jax     0.4.20
+jaxlib  0.4.20
+haiku   0.0.11
+numpy   1.26.4
+backend gpu
+devices [cuda(id=0)]
+matmul ok: 8589934592.0
+[04:32:23] disk free: 27G
+[04:32:23] === DONE ===

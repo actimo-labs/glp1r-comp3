@@ -1,0 +1,44 @@
+[04:23:21] disk before: 37G free
+[04:23:21] === AF2 params ===
+[04:23:21] streaming params_model_1_ptm.npz out of alphafold_params_2022-12-06.tar
+[04:25:15] params OK: 356M
+[04:25:15] === conda env af2ig ===
+WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  Did you know? You can install many PyPI packages with conda
+  using the conda-pypi beta. Get started:
+    https://docs.conda.io/projects/conda/en/stable/new-features.html
+
+[04:25:25] conda create rc=0
+[04:25:25] === pip: jax cuda12 + haiku ===
+[04:27:37] pip jax rc=0
+[04:27:37] === pip: tensorflow-cpu (AF2 data pipeline) + analysis libs ===
+[04:28:00] tf rc=0
+[04:28:00] === MDAnalysis + ProDy into boltz env ===
+[04:28:29] mda/prody rc=0
+[04:28:29] === VERIFY ===
+  File "/home/HarjasG/miniforge3/envs/af2ig/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/HarjasG/miniforge3/envs/af2ig/lib/python3.11/site-packages/jax/__init__.py", line 39, in <module>
+    from jax import config as _config_module
+  File "/home/HarjasG/miniforge3/envs/af2ig/lib/python3.11/site-packages/jax/config.py", line 15, in <module>
+    from jax._src.config import config as _deprecated_config  # noqa: F401
+  File "/home/HarjasG/miniforge3/envs/af2ig/lib/python3.11/site-packages/jax/_src/config.py", line 28, in <module>
+    from jax._src import lib
+  File "/home/HarjasG/miniforge3/envs/af2ig/lib/python3.11/site-packages/jax/_src/lib/__init__.py", line 111, in <module>
+    import jaxlib.gpu_sparse as gpu_sparse  # pytype: disable=import-error
+  File "/home/HarjasG/miniforge3/envs/af2ig/lib/python3.11/site-packages/jaxlib/gpu_sparse.py", line 30, in <module>
+    from .cuda import _sparse as _cusparse  # pytype: disable=import-error
+AttributeError: _ARRAY_API not found
+  jax              FAIL AttributeError: module 'numpy' has no attribute 'trapz'
+  jaxlib           0.4.20
+  haiku            FAIL AttributeError: module 'numpy' has no attribute 'trapz'
+  tree             0.1.10
+  ml_collections   1.0.0
+  Bio              1.88
+  jax devices    : FAIL module 'numpy' has no attribute 'trapz'
+  MDAnalysis 2.11.0 | ProDy 2.6.1
+drwxr-xr-x 2 HarjasG HarjasG      4096 Oct 25 04:24 .
+drwxr-xr-x 3 HarjasG HarjasG      4096 Oct 25 04:23 ..
+-rw-r--r-- 1 HarjasG HarjasG 373103340 Jul 19  2021 params_model_1_ptm.npz
+[04:28:32] disk after: 27G free
+[04:28:32] === DONE ===

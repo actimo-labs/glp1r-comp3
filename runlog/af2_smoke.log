@@ -1,0 +1,13 @@
+WARNING:tensorflow:From /home/HarjasG/tnf-track3/dl_binder_design/af2_initial_guess/alphafold/model/tf/input_pipeline.py:151: calling map_fn (from tensorflow.python.ops.map_fn) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Use fn_output_signature instead
+[af2ig] backend=gpu devices=[cuda(id=0)]
+The distance between residues 30 and 31 is 26.51 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 30
+The distance between residues 131 and 132 is 12.16 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 131
+The distance between residues 334 and 335 is 10.37 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 334
+[af2ig] native_glp1_glp1r  pae_int=7.06  plddt_binder=84.0  121.89s
+
+[af2ig] 1 ok, 0 failed, 121.9s total, 121.9s/design
