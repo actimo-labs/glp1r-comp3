@@ -14,3 +14,7 @@ classC len=75 rc=0 wall=2666s designs=66 per_design=40s
 === classC len=85 : 66 designs ===
 classC len=85 rc=1 wall=910s designs=21 per_design=43s
 === classA len=65 : 40 designs ===
+classA len=65 rc=0 wall=2038s designs=40 per_design=50s
+=== classA len=75 : 40 designs ===
+classA len=75 rc=0 wall=2134s designs=40 per_design=53s
+=== classA len=85 : 40 designs ===

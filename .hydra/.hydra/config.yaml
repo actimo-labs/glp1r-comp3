@@ -7,7 +7,7 @@ inference:
   recenter: true
   radius: 10.0
   model_only_neighbors: false
-  output_prefix: /work/gen/rfdiff/classAL65
+  output_prefix: /work/gen/rfdiff/classAL85
   write_trajectory: true
   scaffold_guided: false
   model_runner: SelfConditioning
@@ -23,7 +23,7 @@ inference:
   cyc_chains: a
 contigmap:
   contigs:
-  - A136-155/A187-241/A280-317/A361-397/0 65-65
+  - A136-155/A187-241/A280-317/A361-397/0 85-85
   inpaint_seq: null
   inpaint_str: null
   inpaint_str_helix: null

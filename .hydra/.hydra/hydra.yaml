@@ -113,9 +113,9 @@ hydra:
     - hydra.run.dir=/work/.hydra
     - hydra.mode=RUN
     task:
-    - inference.output_prefix=/work/gen/rfdiff/classAL65
+    - inference.output_prefix=/work/gen/rfdiff/classAL85
     - inference.input_pdb=/work/target/glp1r_classA_crop.pdb
-    - contigmap.contigs=[A136-155/A187-241/A280-317/A361-397/0 65-65]
+    - contigmap.contigs=[A136-155/A187-241/A280-317/A361-397/0 85-85]
     - ppi.hotspot_res=[A299,A141,A384,A298,A201]
     - inference.num_designs=40
     - denoiser.noise_scale_ca=0
@@ -123,7 +123,7 @@ hydra:
   job:
     name: run_inference
     chdir: null
-    override_dirname: contigmap.contigs=[A136-155/A187-241/A280-317/A361-397/0 65-65],denoiser.noise_scale_ca=0,denoiser.noise_scale_frame=0,inference.input_pdb=/work/target/glp1r_classA_crop.pdb,inference.num_designs=40,inference.output_prefix=/work/gen/rfdiff/classAL65,ppi.hotspot_res=[A299,A141,A384,A298,A201]
+    override_dirname: contigmap.contigs=[A136-155/A187-241/A280-317/A361-397/0 85-85],denoiser.noise_scale_ca=0,denoiser.noise_scale_frame=0,inference.input_pdb=/work/target/glp1r_classA_crop.pdb,inference.num_designs=40,inference.output_prefix=/work/gen/rfdiff/classAL85,ppi.hotspot_res=[A299,A141,A384,A298,A201]
     id: ???
     num: ???
     config_name: base
