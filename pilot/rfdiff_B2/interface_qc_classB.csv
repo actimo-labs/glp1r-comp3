@@ -1,0 +1,4 @@
+design,binder_len,n_contact_res,hotspots_engaged,hotspots_list,lipid_frac,verdict
+classBL90_0,90,13,3,241|387|391,0.08,ok
+classBL90_1,90,10,3,241|387|391,0.0,ok
+classBL130_0,130,10,1,241,0.2,ok

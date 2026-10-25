@@ -3,3 +3,5 @@ class B compliant: target=A29-53/A62-129/A136-155/A187-241/A280-317/A361-397
 === classB len=90 : 2 designs ===
 classB len=90 rc=0 wall=390s designs=2 per_design=195s
 === classB len=130 : 2 designs ===
+classB len=130 rc=0 wall=431s designs=2 per_design=215s
+CLASSB_DONE
