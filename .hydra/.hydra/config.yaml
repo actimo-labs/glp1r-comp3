@@ -1,14 +1,14 @@
 inference:
-  input_pdb: /work/target/glp1r_classA_crop.pdb
-  num_designs: 40
+  input_pdb: /work/target/glp1r_classC_crop.pdb
+  num_designs: 66
   design_startnum: 0
   ckpt_override_path: null
   symmetry: null
   recenter: true
   radius: 10.0
   model_only_neighbors: false
-  output_prefix: /work/gen/rfdiff/classAL85
-  write_trajectory: true
+  output_prefix: /work/gen/rfdiff/classCL85
+  write_trajectory: false
   scaffold_guided: false
   model_runner: SelfConditioning
   cautious: true
@@ -23,7 +23,7 @@ inference:
   cyc_chains: a
 contigmap:
   contigs:
-  - A136-155/A187-241/A280-317/A361-397/0 85-85
+  - A29-53/A63-74/A80-103/A110-129/0 85-85
   inpaint_seq: null
   inpaint_str: null
   inpaint_str_helix: null
@@ -91,11 +91,11 @@ denoiser:
   frame_noise_schedule_type: constant
 ppi:
   hotspot_res:
-  - A299
-  - A141
-  - A384
-  - A298
-  - A201
+  - A32
+  - A68
+  - A39
+  - A69
+  - A35
 potentials:
   guiding_potentials: null
   guide_scale: 10

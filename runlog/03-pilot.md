@@ -152,3 +152,32 @@ ended and contended for the GPU. Re-chained to `gen -> topupC -> genB`.
 
 **Rule going forward:** do not run a cleanup process against a directory a live
 job is writing to.
+
+---
+
+# Incident 2026-10-25 10:06 — tmux prefix matching deadlocked the job chain
+
+**What happened.** The class C top-up and the class B run were queued as two
+scripts that each waited on a tmux session name:
+
+```bash
+while tmux has-session -t gen; do sleep 60; done     # top-up
+while tmux has-session -t gen || tmux has-session -t topupC; do ... done   # class B
+```
+
+`tmux has-session -t NAME` falls back to **prefix matching** when there is no
+exact match. After the real `gen` session ended, `-t gen` matched **`genB`**.
+So the top-up waited on class B, and class B waited on a name that resolved to
+itself. Both blocked; the GPU went idle at 0%.
+
+**Detection.** Caught by checking `nvidia-smi` at the handoff rather than
+trusting that the queued job had started. ~1 minute of idle GPU.
+
+**Fix.** Replaced two coordinating jobs with one sequential script
+(`topup_then_B.sh`). Where a tmux target is still needed, use `-t =NAME`, which
+forces exact matching.
+
+**Pattern across both incidents today:** the science has been fine; the two
+failures were orchestration. Both were found by verifying observable state
+(GPU utilisation, file counts) rather than by assuming a background job did
+what it was told.

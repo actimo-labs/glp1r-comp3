@@ -18,3 +18,16 @@ classA len=65 rc=0 wall=2038s designs=40 per_design=50s
 === classA len=75 : 40 designs ===
 classA len=75 rc=0 wall=2134s designs=40 per_design=53s
 === classA len=85 : 40 designs ===
+classA len=85 rc=0 wall=2247s designs=40 per_design=56s
+
+=== timings ===
+tag     len  wall_s  n_designs  s_per_design
+classC  65   2196    66         33
+classC  75   2666    66         40
+classC  85   910     21         43
+classA  65   2038    40         50
+classA  75   2134    40         53
+classA  85   2247    40         56
+total backbones: 273
+distinct binder lengths: A/C 65 75 85  B 45 60 75  (+9 motif)
+GENERATION_CA_DONE
