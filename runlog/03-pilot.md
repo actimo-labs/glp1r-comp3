@@ -118,3 +118,37 @@ inside this repo. Rule going forward: never execute a comp-02 script in place.
   backbone in native frame, with **all 27** message-module contacts retained.
 - No FastRelax between MPNN and AF2 (no PyRosetta). Upstream dl_binder_design
   does relax. Goes in the "not computed / not run" list.
+
+---
+
+# Incident 2026-10-25 08:30 — disk janitor killed a generation batch
+
+**What happened.** I added a background janitor to delete `gen/rfdiff/traj`
+every 5 minutes, to reclaim the ~6 MB/design RFdiffusion writes in trajectory
+dumps. It deleted the *directory*, not just its contents. RFdiffusion then tried
+to create the next trajectory file inside a path that no longer existed:
+
+```
+FileNotFoundError: '/work/gen/rfdiff/traj/classCL85_20_pX0_traj.pdb'
+```
+
+The class C length-85 batch died at design 21 of 66. 45 backbones lost, ~15 min
+of GPU wasted. Classes C-65 and C-75 had already completed, so they were
+unaffected, and the script moved on to class A normally.
+
+**Why it was a bad call in the first place.** Disk had 26 GB free and was not
+under pressure. Projected trajectory usage for the whole run was ~4 GB. I
+optimised a resource that was not scarce and introduced a failure mode into a
+job that was running fine.
+
+**Fix.** Janitor removed entirely. `traj/` recreated. A top-up job regenerates
+the missing 45 with `inference.write_trajectory=False`, which solves the disk
+concern at the source rather than racing the writer. Trajectories are now left
+alone during the run and cleaned once generation finishes.
+
+**Second bug found while fixing the first.** The top-up and the class B job were
+both waiting on the `gen` tmux session, so both would have started the moment it
+ended and contended for the GPU. Re-chained to `gen -> topupC -> genB`.
+
+**Rule going forward:** do not run a cleanup process against a directory a live
+job is writing to.

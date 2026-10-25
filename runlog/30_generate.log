@@ -10,3 +10,7 @@ derived segments:
 === classC len=65 : 66 designs ===
 classC len=65 rc=0 wall=2196s designs=66 per_design=33s
 === classC len=75 : 66 designs ===
+classC len=75 rc=0 wall=2666s designs=66 per_design=40s
+=== classC len=85 : 66 designs ===
+classC len=85 rc=1 wall=910s designs=21 per_design=43s
+=== classA len=65 : 40 designs ===
