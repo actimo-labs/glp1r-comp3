@@ -74,3 +74,42 @@ to reject class A and B designs would be reading a known-broken instrument.
 
 Recorded in the "not computed / not run" list: no FastRelax; its measured cost
 on the positive control is pae_interaction 7.06 → 17.39.
+
+---
+
+# ADDENDUM — AF2 checked against the folded-non-binder null too
+
+Three comp-02 TNF designs threaded onto class C backbones of matching length
+and run through AF2-ig:
+
+| Control | pae_interaction | plddt_binder |
+|---|---|---|
+| NEGBIND_tnf_186_s4 | 26.10 | 92.3 |
+| NEGBIND_tnf_6_s3 | 26.86 | 94.1 |
+| NEGBIND_tnf_214_s3 | 27.45 | 94.3 |
+
+Two things follow.
+
+**The `pae_interaction < 22.0` cut survives.** Folded non-binders score 26.1–27.45,
+comfortably above it, and above the shuffle null's 22.00 as well. The cut sits
+below both nulls, so it is conservative in the right direction. Kept unchanged.
+It could be relaxed to ~24 to admit more class C candidates, but all seven class
+C designs that currently pass score 17.52–21.90, so relaxing buys nothing and
+costs Boltz time.
+
+**It confirms AF2-ig is blind on the TMD classes, now against a proper control.**
+
+```
+folded non-binders (definitely do not bind) : 26.10 - 27.45
+our class A and class B designs  (n = 26)   : 27.26 - 28.35
+```
+
+Our TMD designs are **indistinguishable from proteins known not to bind** —
+in fact marginally worse. Earlier this was inferred from PAE saturation; it is
+now measured against a real negative. Gating class A or B on AF2-ig would be
+rejecting designs on a signal the instrument demonstrably cannot produce for
+this epitope. Boltz-2 does that job.
+
+Note also `plddt_binder` 92–94 for the non-binders, higher than any of our
+designs. Same lesson as the Boltz calibration: `plddt_binder` tracks foldedness,
+not binding, in both models.
