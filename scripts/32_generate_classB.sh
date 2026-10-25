@@ -62,6 +62,7 @@ for L in "${LENS[@]}"; do
     "ppi.hotspot_res=$HOT" \
     inference.num_designs="$n" \
     denoiser.noise_scale_ca=0 denoiser.noise_scale_frame=0 \
+    inference.write_trajectory=False \
     hydra.run.dir=/work/.hydra >> "logs/gen_classBL${L}.log" 2>&1
   rc=$?; t1=$(date +%s)
   got=$(ls "$OUT/classBL${L}"_*.pdb 2>/dev/null | wc -l)
