@@ -1,7 +1,7 @@
-- inference.output_prefix=/work/pilot/rfdiff_crop/classC
-- inference.input_pdb=/work/target/glp1r_classC_crop.pdb
-- contigmap.contigs=[A29-53/A63-74/A80-103/A110-129/0 60-90]
-- ppi.hotspot_res=[A32,A68,A39,A69,A35]
+- inference.output_prefix=/work/pilot/rfdiff_crop/classA
+- inference.input_pdb=/work/target/glp1r_classA_crop.pdb
+- contigmap.contigs=[A136-155/A187-241/A280-317/A361-397/0 60-90]
+- ppi.hotspot_res=[A299,A141,A384,A298,A201]
 - inference.num_designs=8
 - denoiser.noise_scale_ca=0
 - denoiser.noise_scale_frame=0

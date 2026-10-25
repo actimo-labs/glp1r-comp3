@@ -53,10 +53,21 @@ def longest_common_substring(a, b):
     return best, a[best_end - best:best_end]
 
 
-def pct_identity(a, b):
-    """Ungapped identity over the shorter sequence, best offset. Cheap proxy."""
+def pct_identity(a, b, min_overlap_frac=0.8):
+    """
+    Ungapped identity, best offset, normalised by the SHORTER sequence.
+
+    Normalising by the overlap instead (the obvious implementation) is wrong and
+    silently catastrophic: a one-residue overhang that happens to match scores
+    100%, so every pair of designs looks like a duplicate. Normalising by the
+    shorter length means a partial overlap can never exceed the fraction of that
+    sequence actually aligned. Offsets that align less than `min_overlap_frac`
+    of the shorter sequence are skipped outright.
+    """
     if not a or not b:
         return 0.0
+    shorter = min(len(a), len(b))
+    need = max(1, int(shorter * min_overlap_frac))
     best = 0
     for off in range(-(len(b) - 1), len(a)):
         m = n = 0
@@ -65,8 +76,8 @@ def pct_identity(a, b):
             if 0 <= j < len(b):
                 n += 1
                 m += a[i] == b[j]
-        if n:
-            best = max(best, m / n)
+        if n >= need:
+            best = max(best, m / shorter)
     return best * 100
 
 
