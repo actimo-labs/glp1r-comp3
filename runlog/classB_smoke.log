@@ -1,0 +1,8 @@
+CLASSB_SMOKE rc=0 wall=182s n=2 per_design=91s
+--- motif RMSD reported during sampling ---
+Sampled motif RMSD: 0.19
+Sampled motif RMSD: 0.18
+Sampled motif RMSD: 0.16
+Sampled motif RMSD: 0.15
+Sampled motif RMSD: 0.14
+CLASSB_SMOKE_DONE

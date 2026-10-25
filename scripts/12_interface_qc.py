@@ -55,6 +55,30 @@ def load_chains(pdb):
     return {c: {n: np.array(v) for n, v in r.items()} for c, r in ch.items()}
 
 
+def target_map(pdb):
+    """
+    Output-target residue number -> ORIGINAL receptor residue number.
+
+    Must come from the .trb, not from a linear offset. RFdiffusion renumbers the
+    target contiguously in the output, but a cropped contig is segmented
+    (A136-155/A187-241/...), so output index N does NOT equal original start+N
+    past the first segment. A linear offset silently mislabels every hotspot
+    beyond segment one -- which is most of them.
+
+    Returns None if no .trb, so the caller can fall back explicitly.
+    """
+    trb = pdb[:-4] + ".trb"
+    if not os.path.isfile(trb):
+        return None
+    import pickle
+    d = pickle.load(open(trb, "rb"))
+    ref = d.get("receptor_con_ref_pdb_idx")
+    hal = d.get("receptor_con_hal_pdb_idx")
+    if not ref or not hal:
+        return None
+    return {h[1]: r[1] for r, h in zip(ref, hal)}
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--dir", required=True)
@@ -80,15 +104,20 @@ def main():
         if "A" not in ch or "B" not in ch:
             continue
         binder, target = ch["A"], ch["B"]
-        off = min(target) - args.target_start     # output -> original
+        tmap = target_map(f)
+        if tmap is None:
+            off = min(target) - args.target_start
+            tmap = {n: n - off for n in target}
+            print(f"  WARNING {os.path.basename(f)}: no .trb, "
+                  f"falling back to linear offset (wrong if contig is segmented)")
 
         bl = list(binder.values())
         contacts = {}
         for tn, tv in target.items():
             d = min(np.linalg.norm(bv[:, None, :] - tv[None, :, :], axis=-1).min()
                     for bv in bl)
-            if d < CONTACT_A:
-                contacts[tn - off] = round(float(d), 2)
+            if d < CONTACT_A and tn in tmap:
+                contacts[tmap[tn]] = round(float(d), 2)
 
         engaged = sorted(h for h in hot if h in contacts)
         n_lip = sum(1 for r in contacts if r in lipid)

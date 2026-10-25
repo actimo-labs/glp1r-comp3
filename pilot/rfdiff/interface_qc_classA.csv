@@ -1,9 +1,9 @@
 design,binder_len,n_contact_res,hotspots_engaged,hotspots_list,lipid_frac,verdict
-classA_3,90,10,2,141|201,0.2,ok
+classA_3,90,10,2,141|201,0.1,ok
+classA_7,78,11,1,298,0.18,ok
 classA_2,84,7,1,298,0.14,ok
-classA_1,68,5,1,298,0.2,ok
+classA_1,68,5,1,298,0.0,ok
 classA_4,67,5,1,298,0.0,ok
+classA_0,71,4,1,298,0.0,ok
 classA_5,63,4,1,141,0.25,ok
-classA_7,78,11,1,298,0.36,LIPID
 classA_6,75,5,1,298,0.6,LIPID
-classA_0,71,4,1,298,0.5,LIPID
