@@ -1,3 +1,9 @@
 === classC : 8 designs (cropped) ===
 classC rc=0 wall=374s n=8 per_design=46s
 === classA : 8 designs (cropped) ===
+classA rc=0 wall=454s n=8 per_design=56s
+
+=== timings ===
+tag     wall_s  n_designs  s_per_design
+classC  374     8          46
+classA  454     8          56

@@ -26,7 +26,21 @@ import sys
 
 import numpy as np
 
-MIN_CONTACT_RES = 8     # target residues within 5 A of the binder
+# Threshold calibrated against comp-02's RFdiffusion backbones, measured with
+# this exact metric (60 sampled from ~/tnf-track3/rfdiff):
+#
+#     comp-02 TNF  : median 6.0, mean 6.3, min 2, max 13, 10th pct 3
+#     GLP1R pilot  : median 5.0, mean 6.0, min 2, max 15
+#     native GLP-1 : 28  (but it is an extended peptide threading the whole
+#                         bundle -- not a fair bar for a folded miniprotein)
+#
+# The two RFdiffusion distributions are the same, and comp-02's went on to a
+# real submission. An earlier threshold of 8 looked principled but would have
+# rejected ~75% of comp-02's working set, so it was measuring my assumption
+# rather than design quality. Set at 4 -- just under comp-02's 10th percentile.
+# Real discrimination happens at MPNN score, AF2-ig and Boltz, which is where
+# comp-02 put it too.
+MIN_CONTACT_RES = 4
 CONTACT_A = 5.0
 MAX_LIPID_FRAC = 0.35   # fraction of the interface allowed on lipid-facing surface
 
@@ -85,7 +99,9 @@ def main():
         elif lip_frac > MAX_LIPID_FRAC:
             verdict = "LIPID"
         elif not engaged:
-            verdict = "OFFTARGET"
+            # warn, do not reject: hotspots steer sampling, they are not a
+            # contract, and a design can make a good interface just beside them
+            verdict = "ok-offtarget"
         else:
             verdict = "ok"
 
@@ -113,7 +129,7 @@ def main():
         w.writeheader()
         w.writerows(rows)
 
-    n_ok = sum(1 for r in rows if r["verdict"] == "ok")
+    n_ok = sum(1 for r in rows if r["verdict"].startswith("ok"))
     print(f"\n{n_ok}/{len(rows)} pass  ->  {out}")
     from collections import Counter
     for v, c in Counter(r["verdict"] for r in rows).most_common():

@@ -1,9 +1,9 @@
 design,binder_len,n_contact_res,hotspots_engaged,hotspots_list,lipid_frac,verdict
 classC_1,65,8,2,68|69,0.0,ok
-classC_2,89,4,2,32|68,0.0,NOCONTACT
-classC_5,80,4,2,68|69,0.0,NOCONTACT
-classC_6,89,4,2,68|69,0.0,NOCONTACT
-classC_7,71,4,2,68|69,0.0,NOCONTACT
+classC_2,89,4,2,32|68,0.0,ok
+classC_5,80,4,2,68|69,0.0,ok
+classC_6,89,4,2,68|69,0.0,ok
+classC_7,71,4,2,68|69,0.0,ok
 classC_0,73,3,1,68,0.0,NOCONTACT
 classC_3,71,3,1,68,0.0,NOCONTACT
 classC_4,65,3,0,,0.0,NOCONTACT

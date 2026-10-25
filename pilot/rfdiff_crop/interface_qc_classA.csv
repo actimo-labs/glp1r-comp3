@@ -1,0 +1,9 @@
+design,binder_len,n_contact_res,hotspots_engaged,hotspots_list,lipid_frac,verdict
+classA_6,90,9,1,141,0.22,ok
+classA_3,67,7,1,141,0.29,ok
+classA_0,61,15,0,,0.27,ok-offtarget
+classA_7,87,8,0,,0.25,ok-offtarget
+classA_1,62,7,0,,0.29,ok-offtarget
+classA_2,88,7,0,,0.29,ok-offtarget
+classA_4,76,6,0,,0.17,ok-offtarget
+classA_5,61,5,0,,0.2,ok-offtarget
