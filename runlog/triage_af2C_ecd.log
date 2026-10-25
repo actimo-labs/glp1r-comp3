@@ -1,3 +1,1829 @@
 WARNING:tensorflow:From /home/HarjasG/tnf-track3/dl_binder_design/af2_initial_guess/alphafold/model/tf/input_pipeline.py:151: calling map_fn (from tensorflow.python.ops.map_fn) with dtype is deprecated and will be removed in a future version.
 Instructions for updating:
 Use fn_output_signature instead
+[af2ig] backend=gpu devices=[cuda(id=0)]
+[af2ig] 607 designs, 3 distinct lengths -> 3 compiles (~6 min) + ~106 min inference
+The distance between residues 65 and 66 is 40.16 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_11_s1  pae_int=26.45  plddt_binder=79.3  119.73s
+The distance between residues 65 and 66 is 40.16 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_11_s2  pae_int=26.34  plddt_binder=76.7  6.33s
+The distance between residues 65 and 66 is 40.16 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_11_s3  pae_int=24.30  plddt_binder=87.5  6.2s
+The distance between residues 65 and 66 is 40.16 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_11_s4  pae_int=26.08  plddt_binder=69.1  6.2s
+The distance between residues 65 and 66 is 12.90 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_12_s1  pae_int=6.55  plddt_binder=89.1  6.2s
+The distance between residues 65 and 66 is 12.90 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_12_s2  pae_int=9.61  plddt_binder=75.0  6.25s
+The distance between residues 65 and 66 is 12.90 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_12_s3  pae_int=7.87  plddt_binder=82.6  6.21s
+The distance between residues 65 and 66 is 12.90 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_12_s4  pae_int=8.82  plddt_binder=79.1  6.16s
+The distance between residues 65 and 66 is 38.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_13_s1  pae_int=26.74  plddt_binder=90.4  6.2s
+The distance between residues 65 and 66 is 38.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_13_s2  pae_int=26.87  plddt_binder=93.2  6.15s
+The distance between residues 65 and 66 is 38.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_13_s3  pae_int=26.66  plddt_binder=91.0  7.04s
+The distance between residues 65 and 66 is 38.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_13_s4  pae_int=26.78  plddt_binder=91.8  6.24s
+The distance between residues 65 and 66 is 26.61 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_14_s1  pae_int=26.37  plddt_binder=89.3  6.21s
+The distance between residues 65 and 66 is 26.61 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_14_s2  pae_int=4.75  plddt_binder=92.9  6.19s
+The distance between residues 65 and 66 is 26.61 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_14_s3  pae_int=25.56  plddt_binder=93.3  6.17s
+The distance between residues 65 and 66 is 26.61 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_14_s4  pae_int=25.85  plddt_binder=89.8  6.19s
+The distance between residues 65 and 66 is 32.76 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_16_s1  pae_int=4.65  plddt_binder=93.3  6.18s
+The distance between residues 65 and 66 is 32.76 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_16_s2  pae_int=4.35  plddt_binder=94.2  6.16s
+The distance between residues 65 and 66 is 32.76 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_16_s3  pae_int=4.84  plddt_binder=92.0  6.17s
+The distance between residues 65 and 66 is 32.76 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_16_s4  pae_int=15.36  plddt_binder=81.4  6.15s
+The distance between residues 65 and 66 is 16.56 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_17_s1  pae_int=25.80  plddt_binder=89.8  6.11s
+The distance between residues 65 and 66 is 16.56 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_17_s2  pae_int=24.54  plddt_binder=77.6  6.95s
+The distance between residues 65 and 66 is 16.56 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_17_s3  pae_int=26.83  plddt_binder=65.3  6.14s
+The distance between residues 65 and 66 is 16.56 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_17_s4  pae_int=5.12  plddt_binder=92.2  6.13s
+The distance between residues 65 and 66 is 44.67 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_18_s1  pae_int=10.68  plddt_binder=92.3  6.18s
+The distance between residues 65 and 66 is 44.67 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_18_s2  pae_int=14.22  plddt_binder=90.6  6.12s
+The distance between residues 65 and 66 is 44.67 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_18_s3  pae_int=12.84  plddt_binder=90.7  6.14s
+The distance between residues 65 and 66 is 44.67 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_18_s4  pae_int=15.62  plddt_binder=91.9  6.15s
+The distance between residues 65 and 66 is 43.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_19_s1  pae_int=19.23  plddt_binder=87.4  6.12s
+The distance between residues 65 and 66 is 43.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_19_s2  pae_int=24.18  plddt_binder=94.3  6.11s
+The distance between residues 65 and 66 is 43.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_19_s3  pae_int=24.56  plddt_binder=94.5  6.14s
+The distance between residues 65 and 66 is 43.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_19_s4  pae_int=26.15  plddt_binder=93.5  6.95s
+The distance between residues 65 and 66 is 36.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_20_s1  pae_int=10.36  plddt_binder=83.3  6.17s
+The distance between residues 65 and 66 is 36.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_20_s2  pae_int=27.08  plddt_binder=74.7  6.27s
+The distance between residues 65 and 66 is 36.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_20_s3  pae_int=26.05  plddt_binder=62.5  6.14s
+The distance between residues 65 and 66 is 36.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_20_s4  pae_int=26.41  plddt_binder=71.6  6.19s
+The distance between residues 65 and 66 is 17.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_21_s1  pae_int=24.73  plddt_binder=94.2  6.17s
+The distance between residues 65 and 66 is 17.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_21_s2  pae_int=25.06  plddt_binder=92.4  6.12s
+The distance between residues 65 and 66 is 17.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_21_s3  pae_int=25.46  plddt_binder=93.3  6.17s
+The distance between residues 65 and 66 is 17.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_21_s4  pae_int=25.86  plddt_binder=91.2  6.17s
+The distance between residues 65 and 66 is 40.90 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_23_s1  pae_int=8.17  plddt_binder=93.3  6.16s
+The distance between residues 65 and 66 is 40.90 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_23_s2  pae_int=27.41  plddt_binder=87.3  6.97s
+The distance between residues 65 and 66 is 40.90 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_23_s3  pae_int=20.47  plddt_binder=85.4  6.26s
+The distance between residues 65 and 66 is 40.90 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_23_s4  pae_int=25.98  plddt_binder=94.4  6.14s
+The distance between residues 65 and 66 is 32.36 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_24_s1  pae_int=26.14  plddt_binder=90.9  6.18s
+The distance between residues 65 and 66 is 32.36 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_24_s2  pae_int=26.11  plddt_binder=92.9  6.15s
+The distance between residues 65 and 66 is 32.36 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_24_s3  pae_int=26.29  plddt_binder=89.7  6.15s
+The distance between residues 65 and 66 is 32.36 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_24_s4  pae_int=25.60  plddt_binder=91.7  6.15s
+The distance between residues 65 and 66 is 32.08 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_26_s1  pae_int=25.28  plddt_binder=83.8  6.14s
+The distance between residues 65 and 66 is 32.08 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_26_s2  pae_int=21.96  plddt_binder=86.1  6.13s
+The distance between residues 65 and 66 is 32.08 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_26_s3  pae_int=26.71  plddt_binder=80.9  6.19s
+The distance between residues 65 and 66 is 32.08 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_26_s4  pae_int=27.01  plddt_binder=89.6  6.9s
+The distance between residues 65 and 66 is 27.77 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_27_s1  pae_int=21.24  plddt_binder=79.5  6.13s
+The distance between residues 65 and 66 is 27.77 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_27_s2  pae_int=16.45  plddt_binder=88.7  6.19s
+The distance between residues 65 and 66 is 27.77 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_27_s3  pae_int=11.16  plddt_binder=85.1  6.22s
+The distance between residues 65 and 66 is 27.77 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_27_s4  pae_int=12.71  plddt_binder=90.1  6.17s
+The distance between residues 65 and 66 is 39.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_28_s1  pae_int=26.36  plddt_binder=87.7  6.19s
+The distance between residues 65 and 66 is 39.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_28_s2  pae_int=27.29  plddt_binder=92.5  6.09s
+The distance between residues 65 and 66 is 39.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_28_s3  pae_int=27.77  plddt_binder=87.4  6.15s
+The distance between residues 65 and 66 is 39.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_28_s4  pae_int=27.00  plddt_binder=91.8  6.22s
+The distance between residues 65 and 66 is 37.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_29_s1  pae_int=26.40  plddt_binder=92.6  6.97s
+The distance between residues 65 and 66 is 37.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_29_s2  pae_int=20.33  plddt_binder=86.2  6.29s
+The distance between residues 65 and 66 is 37.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_29_s3  pae_int=26.38  plddt_binder=65.4  6.11s
+The distance between residues 65 and 66 is 37.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_29_s4  pae_int=8.07  plddt_binder=89.7  6.23s
+The distance between residues 65 and 66 is 11.21 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_30_s1  pae_int=24.25  plddt_binder=86.9  6.21s
+The distance between residues 65 and 66 is 11.21 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_30_s2  pae_int=17.17  plddt_binder=87.7  6.15s
+The distance between residues 65 and 66 is 11.21 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_30_s3  pae_int=26.57  plddt_binder=90.6  6.18s
+The distance between residues 65 and 66 is 11.21 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_30_s4  pae_int=18.83  plddt_binder=87.5  6.16s
+The distance between residues 65 and 66 is 33.00 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_33_s1  pae_int=26.38  plddt_binder=90.7  6.13s
+The distance between residues 65 and 66 is 33.00 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_33_s2  pae_int=22.62  plddt_binder=83.7  6.16s
+The distance between residues 65 and 66 is 33.00 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_33_s3  pae_int=27.48  plddt_binder=62.9  6.14s
+The distance between residues 65 and 66 is 33.00 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_33_s4  pae_int=26.81  plddt_binder=89.0  6.97s
+The distance between residues 65 and 66 is 15.73 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_35_s1  pae_int=5.19  plddt_binder=93.5  6.16s
+The distance between residues 65 and 66 is 15.73 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_35_s2  pae_int=6.39  plddt_binder=92.5  6.18s
+The distance between residues 65 and 66 is 15.73 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_35_s3  pae_int=22.30  plddt_binder=91.2  6.16s
+The distance between residues 65 and 66 is 15.73 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_35_s4  pae_int=5.95  plddt_binder=93.4  6.15s
+The distance between residues 65 and 66 is 35.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_36_s1  pae_int=25.37  plddt_binder=95.8  6.12s
+The distance between residues 65 and 66 is 35.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_36_s2  pae_int=25.95  plddt_binder=94.5  6.14s
+The distance between residues 65 and 66 is 35.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_36_s3  pae_int=7.27  plddt_binder=92.3  6.16s
+The distance between residues 65 and 66 is 35.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_36_s4  pae_int=7.84  plddt_binder=93.3  6.15s
+The distance between residues 65 and 66 is 32.58 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_37_s1  pae_int=23.13  plddt_binder=94.7  6.08s
+The distance between residues 65 and 66 is 32.58 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_37_s2  pae_int=23.58  plddt_binder=95.2  6.86s
+The distance between residues 65 and 66 is 32.58 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_37_s3  pae_int=19.68  plddt_binder=91.0  6.18s
+The distance between residues 65 and 66 is 32.58 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_37_s4  pae_int=22.68  plddt_binder=95.2  6.12s
+The distance between residues 65 and 66 is 37.01 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_39_s1  pae_int=14.27  plddt_binder=87.4  6.2s
+The distance between residues 65 and 66 is 37.01 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_39_s2  pae_int=12.72  plddt_binder=88.4  6.16s
+The distance between residues 65 and 66 is 37.01 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_39_s3  pae_int=6.74  plddt_binder=90.1  6.15s
+The distance between residues 65 and 66 is 37.01 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_39_s4  pae_int=17.16  plddt_binder=86.0  6.17s
+The distance between residues 65 and 66 is 45.14 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_3_s1  pae_int=21.59  plddt_binder=91.1  6.12s
+The distance between residues 65 and 66 is 45.14 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_3_s2  pae_int=18.84  plddt_binder=90.4  6.18s
+The distance between residues 65 and 66 is 45.14 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_3_s3  pae_int=26.24  plddt_binder=95.5  6.07s
+The distance between residues 65 and 66 is 45.14 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_3_s4  pae_int=26.17  plddt_binder=93.8  6.93s
+The distance between residues 65 and 66 is 36.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_41_s1  pae_int=24.38  plddt_binder=95.1  6.17s
+The distance between residues 65 and 66 is 36.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_41_s2  pae_int=22.45  plddt_binder=93.8  6.15s
+The distance between residues 65 and 66 is 36.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_41_s3  pae_int=24.96  plddt_binder=95.4  6.24s
+The distance between residues 65 and 66 is 36.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_41_s4  pae_int=26.62  plddt_binder=94.6  6.19s
+The distance between residues 65 and 66 is 35.96 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_42_s1  pae_int=21.58  plddt_binder=69.7  6.16s
+The distance between residues 65 and 66 is 35.96 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_42_s2  pae_int=24.48  plddt_binder=80.4  6.16s
+The distance between residues 65 and 66 is 35.96 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_42_s3  pae_int=11.30  plddt_binder=69.5  6.17s
+The distance between residues 65 and 66 is 35.96 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_42_s4  pae_int=8.77  plddt_binder=76.9  6.19s
+The distance between residues 65 and 66 is 26.04 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_43_s1  pae_int=27.21  plddt_binder=87.8  6.14s
+The distance between residues 65 and 66 is 26.04 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_43_s2  pae_int=26.16  plddt_binder=92.4  6.93s
+The distance between residues 65 and 66 is 26.04 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_43_s3  pae_int=25.71  plddt_binder=84.7  6.19s
+The distance between residues 65 and 66 is 26.04 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_43_s4  pae_int=26.74  plddt_binder=89.2  6.17s
+The distance between residues 65 and 66 is 23.35 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_44_s1  pae_int=27.34  plddt_binder=90.2  6.18s
+The distance between residues 65 and 66 is 23.35 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_44_s2  pae_int=27.34  plddt_binder=85.2  6.16s
+The distance between residues 65 and 66 is 23.35 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_44_s3  pae_int=27.17  plddt_binder=83.8  6.17s
+The distance between residues 65 and 66 is 23.35 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_44_s4  pae_int=27.33  plddt_binder=84.9  6.14s
+The distance between residues 65 and 66 is 25.29 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_46_s1  pae_int=26.16  plddt_binder=86.9  6.19s
+The distance between residues 65 and 66 is 25.29 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_46_s2  pae_int=12.95  plddt_binder=84.7  6.17s
+The distance between residues 65 and 66 is 25.29 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_46_s3  pae_int=24.95  plddt_binder=89.2  6.95s
+The distance between residues 65 and 66 is 25.29 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_46_s4  pae_int=24.65  plddt_binder=84.5  6.22s
+The distance between residues 65 and 66 is 31.12 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_47_s1  pae_int=4.98  plddt_binder=94.0  6.19s
+The distance between residues 65 and 66 is 31.12 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_47_s2  pae_int=9.07  plddt_binder=88.4  6.18s
+The distance between residues 65 and 66 is 31.12 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_47_s3  pae_int=4.51  plddt_binder=93.9  6.18s
+The distance between residues 65 and 66 is 31.12 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_47_s4  pae_int=25.75  plddt_binder=95.3  6.15s
+The distance between residues 65 and 66 is 45.78 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_48_s1  pae_int=7.47  plddt_binder=90.9  6.18s
+The distance between residues 65 and 66 is 45.78 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_48_s2  pae_int=23.72  plddt_binder=91.1  6.1s
+The distance between residues 65 and 66 is 45.78 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_48_s3  pae_int=6.14  plddt_binder=91.2  6.12s
+The distance between residues 65 and 66 is 45.78 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_48_s4  pae_int=13.03  plddt_binder=88.2  6.15s
+The distance between residues 65 and 66 is 31.43 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_49_s1  pae_int=26.10  plddt_binder=92.0  6.14s
+The distance between residues 65 and 66 is 31.43 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_49_s2  pae_int=13.97  plddt_binder=85.9  6.97s
+The distance between residues 65 and 66 is 31.43 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_49_s3  pae_int=25.47  plddt_binder=89.4  6.21s
+The distance between residues 65 and 66 is 31.43 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_49_s4  pae_int=26.16  plddt_binder=93.7  6.15s
+The distance between residues 65 and 66 is 32.06 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_4_s1  pae_int=8.58  plddt_binder=89.9  6.2s
+The distance between residues 65 and 66 is 32.06 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_4_s2  pae_int=26.42  plddt_binder=82.6  6.15s
+The distance between residues 65 and 66 is 32.06 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_4_s3  pae_int=15.87  plddt_binder=80.4  6.18s
+The distance between residues 65 and 66 is 32.06 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_4_s4  pae_int=26.89  plddt_binder=67.5  6.19s
+The distance between residues 65 and 66 is 10.67 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_50_s1  pae_int=25.53  plddt_binder=92.1  6.15s
+The distance between residues 65 and 66 is 10.67 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_50_s2  pae_int=20.04  plddt_binder=92.7  6.19s
+The distance between residues 65 and 66 is 10.67 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_50_s3  pae_int=25.41  plddt_binder=95.3  6.14s
+The distance between residues 65 and 66 is 10.67 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_50_s4  pae_int=26.75  plddt_binder=92.9  6.98s
+The distance between residues 65 and 66 is 15.73 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_51_s1  pae_int=24.66  plddt_binder=64.0  6.22s
+The distance between residues 65 and 66 is 15.73 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_51_s2  pae_int=23.30  plddt_binder=77.5  6.15s
+The distance between residues 65 and 66 is 15.73 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_51_s3  pae_int=21.59  plddt_binder=88.7  6.21s
+The distance between residues 65 and 66 is 15.73 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_51_s4  pae_int=25.66  plddt_binder=58.0  6.16s
+The distance between residues 65 and 66 is 34.36 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_52_s1  pae_int=26.52  plddt_binder=88.9  6.18s
+The distance between residues 65 and 66 is 34.36 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_52_s2  pae_int=19.25  plddt_binder=93.5  6.08s
+The distance between residues 65 and 66 is 34.36 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_52_s3  pae_int=27.04  plddt_binder=90.3  6.13s
+The distance between residues 65 and 66 is 34.36 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_52_s4  pae_int=26.70  plddt_binder=91.2  6.2s
+The distance between residues 65 and 66 is 34.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_53_s1  pae_int=25.74  plddt_binder=86.7  6.11s
+The distance between residues 65 and 66 is 34.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_53_s2  pae_int=27.07  plddt_binder=77.6  6.96s
+The distance between residues 65 and 66 is 34.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_53_s3  pae_int=26.78  plddt_binder=79.0  6.17s
+The distance between residues 65 and 66 is 34.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_53_s4  pae_int=25.77  plddt_binder=88.8  6.12s
+The distance between residues 65 and 66 is 28.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_54_s1  pae_int=10.05  plddt_binder=89.3  6.16s
+The distance between residues 65 and 66 is 28.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_54_s2  pae_int=26.79  plddt_binder=91.6  6.15s
+The distance between residues 65 and 66 is 28.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_54_s3  pae_int=14.71  plddt_binder=89.3  6.19s
+The distance between residues 65 and 66 is 28.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_54_s4  pae_int=26.34  plddt_binder=90.2  6.15s
+The distance between residues 65 and 66 is 38.48 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_56_s1  pae_int=24.07  plddt_binder=93.6  6.15s
+The distance between residues 65 and 66 is 38.48 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_56_s2  pae_int=26.00  plddt_binder=95.5  6.19s
+The distance between residues 65 and 66 is 38.48 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_56_s3  pae_int=26.27  plddt_binder=95.8  6.14s
+The distance between residues 65 and 66 is 38.48 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_56_s4  pae_int=26.14  plddt_binder=95.3  6.95s
+The distance between residues 65 and 66 is 33.68 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_57_s1  pae_int=26.28  plddt_binder=83.4  6.21s
+The distance between residues 65 and 66 is 33.68 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_57_s2  pae_int=26.63  plddt_binder=60.8  6.1s
+The distance between residues 65 and 66 is 33.68 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_57_s3  pae_int=27.44  plddt_binder=81.5  6.19s
+The distance between residues 65 and 66 is 33.68 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_57_s4  pae_int=26.50  plddt_binder=92.0  6.18s
+The distance between residues 65 and 66 is 46.97 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_58_s1  pae_int=26.20  plddt_binder=79.1  6.19s
+The distance between residues 65 and 66 is 46.97 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_58_s2  pae_int=26.66  plddt_binder=85.0  6.17s
+The distance between residues 65 and 66 is 46.97 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_58_s3  pae_int=26.57  plddt_binder=93.8  6.24s
+The distance between residues 65 and 66 is 46.97 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_58_s4  pae_int=26.79  plddt_binder=92.1  6.18s
+The distance between residues 65 and 66 is 34.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_5_s1  pae_int=26.26  plddt_binder=93.5  7.07s
+The distance between residues 65 and 66 is 34.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_5_s2  pae_int=27.32  plddt_binder=84.3  6.17s
+The distance between residues 65 and 66 is 34.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_5_s3  pae_int=26.77  plddt_binder=90.5  6.2s
+The distance between residues 65 and 66 is 34.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_5_s4  pae_int=26.72  plddt_binder=89.3  6.23s
+The distance between residues 65 and 66 is 31.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_60_s1  pae_int=14.14  plddt_binder=87.6  6.17s
+The distance between residues 65 and 66 is 31.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_60_s2  pae_int=23.46  plddt_binder=83.0  6.13s
+The distance between residues 65 and 66 is 31.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_60_s3  pae_int=15.63  plddt_binder=91.9  6.22s
+The distance between residues 65 and 66 is 31.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_60_s4  pae_int=26.22  plddt_binder=93.1  6.12s
+The distance between residues 65 and 66 is 36.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_61_s1  pae_int=24.41  plddt_binder=88.0  6.13s
+The distance between residues 65 and 66 is 36.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_61_s2  pae_int=26.69  plddt_binder=82.7  6.1s
+The distance between residues 65 and 66 is 36.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_61_s3  pae_int=6.45  plddt_binder=92.5  6.14s
+The distance between residues 65 and 66 is 36.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_61_s4  pae_int=7.07  plddt_binder=91.5  6.98s
+The distance between residues 65 and 66 is 24.69 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_64_s1  pae_int=25.46  plddt_binder=89.3  6.23s
+The distance between residues 65 and 66 is 24.69 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_64_s2  pae_int=5.55  plddt_binder=91.7  6.13s
+The distance between residues 65 and 66 is 24.69 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_64_s3  pae_int=26.87  plddt_binder=88.0  6.17s
+The distance between residues 65 and 66 is 24.69 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_64_s4  pae_int=22.10  plddt_binder=88.6  6.21s
+The distance between residues 65 and 66 is 22.97 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_65_s1  pae_int=27.41  plddt_binder=89.8  6.13s
+The distance between residues 65 and 66 is 22.97 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_65_s2  pae_int=26.80  plddt_binder=85.2  6.13s
+The distance between residues 65 and 66 is 22.97 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_65_s3  pae_int=27.40  plddt_binder=86.2  6.1s
+The distance between residues 65 and 66 is 22.97 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_65_s4  pae_int=27.28  plddt_binder=87.0  6.19s
+The distance between residues 65 and 66 is 29.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_6_s1  pae_int=23.27  plddt_binder=65.0  6.14s
+The distance between residues 65 and 66 is 29.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_6_s2  pae_int=25.75  plddt_binder=62.9  6.97s
+The distance between residues 65 and 66 is 29.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_6_s3  pae_int=26.32  plddt_binder=70.1  6.3s
+The distance between residues 65 and 66 is 29.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_6_s4  pae_int=26.78  plddt_binder=61.3  6.19s
+The distance between residues 65 and 66 is 33.55 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_7_s1  pae_int=26.89  plddt_binder=88.1  6.18s
+The distance between residues 65 and 66 is 33.55 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_7_s2  pae_int=26.79  plddt_binder=87.5  6.18s
+The distance between residues 65 and 66 is 33.55 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_7_s3  pae_int=26.66  plddt_binder=95.5  6.12s
+The distance between residues 65 and 66 is 33.55 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_7_s4  pae_int=26.47  plddt_binder=94.6  6.15s
+The distance between residues 65 and 66 is 27.52 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_8_s1  pae_int=12.77  plddt_binder=83.5  6.14s
+The distance between residues 65 and 66 is 27.52 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_8_s2  pae_int=28.19  plddt_binder=76.0  6.16s
+The distance between residues 65 and 66 is 27.52 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_8_s3  pae_int=13.37  plddt_binder=82.3  6.09s
+The distance between residues 65 and 66 is 27.52 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_8_s4  pae_int=27.30  plddt_binder=72.5  6.88s
+The distance between residues 65 and 66 is 34.60 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_9_s1  pae_int=25.29  plddt_binder=88.4  6.21s
+The distance between residues 65 and 66 is 34.60 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_9_s2  pae_int=25.86  plddt_binder=94.0  6.11s
+The distance between residues 65 and 66 is 34.60 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_9_s3  pae_int=18.50  plddt_binder=88.3  6.16s
+The distance between residues 65 and 66 is 34.60 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_9_s4  pae_int=23.12  plddt_binder=92.9  6.14s
+The distance between residues 75 and 76 is 24.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_13_s1  pae_int=24.69  plddt_binder=93.4  110.56s
+The distance between residues 75 and 76 is 24.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_13_s2  pae_int=25.37  plddt_binder=89.8  6.03s
+The distance between residues 75 and 76 is 24.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_13_s3  pae_int=9.69  plddt_binder=91.8  5.89s
+The distance between residues 75 and 76 is 24.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_13_s4  pae_int=24.30  plddt_binder=93.0  6.01s
+The distance between residues 75 and 76 is 23.82 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_14_s1  pae_int=26.70  plddt_binder=66.5  5.89s
+The distance between residues 75 and 76 is 23.82 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_14_s2  pae_int=26.45  plddt_binder=63.7  5.82s
+The distance between residues 75 and 76 is 23.82 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_14_s3  pae_int=26.20  plddt_binder=61.7  5.92s
+The distance between residues 75 and 76 is 23.82 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_14_s4  pae_int=25.86  plddt_binder=67.2  5.88s
+The distance between residues 75 and 76 is 13.39 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_15_s1  pae_int=24.13  plddt_binder=77.1  5.88s
+The distance between residues 75 and 76 is 13.39 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_15_s2  pae_int=25.53  plddt_binder=92.0  5.87s
+The distance between residues 75 and 76 is 13.39 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_15_s3  pae_int=14.48  plddt_binder=89.7  5.87s
+The distance between residues 75 and 76 is 13.39 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_15_s4  pae_int=25.31  plddt_binder=94.7  5.87s
+The distance between residues 75 and 76 is 52.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_16_s1  pae_int=23.03  plddt_binder=94.2  5.85s
+The distance between residues 75 and 76 is 52.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_16_s2  pae_int=26.14  plddt_binder=96.1  5.92s
+The distance between residues 75 and 76 is 52.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_16_s3  pae_int=26.20  plddt_binder=96.3  6.98s
+The distance between residues 75 and 76 is 52.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_16_s4  pae_int=27.10  plddt_binder=90.6  5.89s
+The distance between residues 75 and 76 is 39.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_17_s1  pae_int=23.54  plddt_binder=92.4  5.94s
+The distance between residues 75 and 76 is 39.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_17_s2  pae_int=25.05  plddt_binder=90.5  5.84s
+The distance between residues 75 and 76 is 39.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_17_s3  pae_int=23.11  plddt_binder=91.3  5.87s
+The distance between residues 75 and 76 is 39.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_17_s4  pae_int=25.37  plddt_binder=91.9  5.87s
+The distance between residues 75 and 76 is 35.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_18_s1  pae_int=24.28  plddt_binder=90.9  5.83s
+The distance between residues 75 and 76 is 35.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_18_s2  pae_int=6.77  plddt_binder=91.4  5.84s
+The distance between residues 75 and 76 is 35.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_18_s3  pae_int=26.03  plddt_binder=63.6  5.78s
+The distance between residues 75 and 76 is 35.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_18_s4  pae_int=25.82  plddt_binder=93.9  5.82s
+The distance between residues 75 and 76 is 18.92 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_1_s1  pae_int=26.87  plddt_binder=94.2  5.83s
+The distance between residues 75 and 76 is 18.92 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_1_s2  pae_int=27.01  plddt_binder=90.2  5.79s
+The distance between residues 75 and 76 is 18.92 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_1_s3  pae_int=25.80  plddt_binder=94.0  5.85s
+The distance between residues 75 and 76 is 18.92 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_1_s4  pae_int=26.87  plddt_binder=92.0  5.83s
+The distance between residues 75 and 76 is 39.01 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_20_s1  pae_int=26.52  plddt_binder=86.1  7.07s
+The distance between residues 75 and 76 is 39.01 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_20_s2  pae_int=27.33  plddt_binder=81.5  5.94s
+The distance between residues 75 and 76 is 39.01 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_20_s3  pae_int=26.64  plddt_binder=89.3  5.89s
+The distance between residues 75 and 76 is 39.01 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_20_s4  pae_int=25.76  plddt_binder=83.6  5.87s
+The distance between residues 75 and 76 is 40.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_21_s1  pae_int=25.96  plddt_binder=79.7  5.86s
+The distance between residues 75 and 76 is 40.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_21_s2  pae_int=26.77  plddt_binder=64.5  5.87s
+The distance between residues 75 and 76 is 40.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_21_s3  pae_int=26.61  plddt_binder=83.2  5.85s
+The distance between residues 75 and 76 is 40.10 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_21_s4  pae_int=27.22  plddt_binder=74.1  5.84s
+The distance between residues 75 and 76 is 39.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_22_s1  pae_int=22.45  plddt_binder=91.9  5.87s
+The distance between residues 75 and 76 is 39.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_22_s2  pae_int=26.99  plddt_binder=86.3  5.84s
+The distance between residues 75 and 76 is 39.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_22_s4  pae_int=25.22  plddt_binder=82.0  5.83s
+The distance between residues 75 and 76 is 42.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_23_s1  pae_int=19.69  plddt_binder=90.2  5.83s
+The distance between residues 75 and 76 is 42.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_23_s2  pae_int=26.57  plddt_binder=88.1  5.81s
+The distance between residues 75 and 76 is 42.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_23_s3  pae_int=26.28  plddt_binder=88.7  5.85s
+The distance between residues 75 and 76 is 42.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_23_s4  pae_int=26.76  plddt_binder=81.4  7.07s
+The distance between residues 75 and 76 is 11.75 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_25_s1  pae_int=26.59  plddt_binder=84.3  5.86s
+The distance between residues 75 and 76 is 11.75 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_25_s2  pae_int=26.65  plddt_binder=82.5  5.88s
+The distance between residues 75 and 76 is 11.75 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_25_s3  pae_int=26.66  plddt_binder=86.8  5.84s
+The distance between residues 75 and 76 is 11.75 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_25_s4  pae_int=27.61  plddt_binder=84.0  5.86s
+The distance between residues 75 and 76 is 33.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_27_s1  pae_int=26.18  plddt_binder=91.8  5.87s
+The distance between residues 75 and 76 is 33.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_27_s2  pae_int=7.40  plddt_binder=89.0  5.82s
+The distance between residues 75 and 76 is 33.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_27_s3  pae_int=9.37  plddt_binder=89.2  5.87s
+The distance between residues 75 and 76 is 33.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_27_s4  pae_int=12.10  plddt_binder=88.2  5.85s
+The distance between residues 75 and 76 is 30.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_28_s1  pae_int=23.92  plddt_binder=96.4  5.83s
+The distance between residues 75 and 76 is 30.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_28_s2  pae_int=22.17  plddt_binder=93.2  5.83s
+The distance between residues 75 and 76 is 30.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_28_s3  pae_int=22.80  plddt_binder=87.9  5.81s
+The distance between residues 75 and 76 is 30.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_28_s4  pae_int=17.50  plddt_binder=87.7  5.81s
+The distance between residues 75 and 76 is 33.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_29_s1  pae_int=25.67  plddt_binder=89.0  5.79s
+The distance between residues 75 and 76 is 33.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_29_s2  pae_int=7.66  plddt_binder=90.3  5.81s
+The distance between residues 75 and 76 is 33.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_29_s3  pae_int=26.61  plddt_binder=90.0  7.05s
+The distance between residues 75 and 76 is 33.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_29_s4  pae_int=18.96  plddt_binder=84.1  5.85s
+The distance between residues 75 and 76 is 49.63 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_2_s1  pae_int=26.61  plddt_binder=95.9  5.9s
+The distance between residues 75 and 76 is 49.63 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_2_s2  pae_int=16.64  plddt_binder=89.6  5.85s
+The distance between residues 75 and 76 is 49.63 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_2_s3  pae_int=7.75  plddt_binder=93.5  5.85s
+The distance between residues 75 and 76 is 49.63 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_2_s4  pae_int=25.84  plddt_binder=96.3  5.82s
+The distance between residues 75 and 76 is 29.31 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_30_s1  pae_int=24.73  plddt_binder=94.3  5.84s
+The distance between residues 75 and 76 is 29.31 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_30_s2  pae_int=9.69  plddt_binder=93.3  5.85s
+The distance between residues 75 and 76 is 29.31 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_30_s3  pae_int=25.21  plddt_binder=94.4  5.82s
+The distance between residues 75 and 76 is 29.31 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_30_s4  pae_int=25.06  plddt_binder=94.6  5.84s
+The distance between residues 75 and 76 is 37.57 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_31_s1  pae_int=22.70  plddt_binder=88.2  5.81s
+The distance between residues 75 and 76 is 37.57 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_31_s2  pae_int=21.88  plddt_binder=89.2  5.83s
+The distance between residues 75 and 76 is 37.57 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_31_s3  pae_int=19.48  plddt_binder=86.3  5.8s
+The distance between residues 75 and 76 is 37.57 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_31_s4  pae_int=26.62  plddt_binder=94.1  5.75s
+The distance between residues 75 and 76 is 29.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_33_s1  pae_int=26.62  plddt_binder=92.6  5.81s
+The distance between residues 75 and 76 is 29.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_33_s2  pae_int=26.34  plddt_binder=94.6  7.04s
+The distance between residues 75 and 76 is 29.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_33_s3  pae_int=26.82  plddt_binder=87.9  5.83s
+The distance between residues 75 and 76 is 29.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_33_s4  pae_int=26.85  plddt_binder=92.2  5.89s
+The distance between residues 75 and 76 is 32.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_35_s1  pae_int=26.59  plddt_binder=84.3  5.82s
+The distance between residues 75 and 76 is 32.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_35_s2  pae_int=26.90  plddt_binder=70.2  5.86s
+The distance between residues 75 and 76 is 32.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_35_s3  pae_int=23.43  plddt_binder=78.5  5.83s
+The distance between residues 75 and 76 is 32.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_35_s4  pae_int=22.52  plddt_binder=85.4  5.81s
+The distance between residues 75 and 76 is 23.23 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_37_s1  pae_int=26.86  plddt_binder=90.1  5.84s
+The distance between residues 75 and 76 is 23.23 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_37_s2  pae_int=26.26  plddt_binder=82.0  5.8s
+The distance between residues 75 and 76 is 23.23 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_37_s3  pae_int=23.17  plddt_binder=61.7  5.83s
+The distance between residues 75 and 76 is 23.23 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_37_s4  pae_int=26.49  plddt_binder=92.4  5.83s
+The distance between residues 75 and 76 is 43.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_3_s1  pae_int=26.52  plddt_binder=93.3  5.79s
+The distance between residues 75 and 76 is 43.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_3_s2  pae_int=26.84  plddt_binder=91.8  5.85s
+The distance between residues 75 and 76 is 43.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_3_s3  pae_int=26.69  plddt_binder=94.2  5.8s
+The distance between residues 75 and 76 is 43.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_3_s4  pae_int=26.74  plddt_binder=88.7  7.02s
+The distance between residues 75 and 76 is 53.09 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_40_s1  pae_int=26.61  plddt_binder=75.9  5.91s
+The distance between residues 75 and 76 is 53.09 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_40_s2  pae_int=27.01  plddt_binder=76.9  5.87s
+The distance between residues 75 and 76 is 53.09 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_40_s3  pae_int=26.63  plddt_binder=84.8  5.88s
+The distance between residues 75 and 76 is 53.09 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_40_s4  pae_int=27.10  plddt_binder=80.6  5.83s
+The distance between residues 75 and 76 is 26.15 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_41_s1  pae_int=25.51  plddt_binder=70.7  5.82s
+The distance between residues 75 and 76 is 26.15 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_41_s2  pae_int=26.45  plddt_binder=91.3  5.85s
+The distance between residues 75 and 76 is 26.15 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_41_s3  pae_int=25.58  plddt_binder=69.7  5.83s
+The distance between residues 75 and 76 is 26.15 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_41_s4  pae_int=26.64  plddt_binder=72.0  5.81s
+The distance between residues 75 and 76 is 22.22 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_42_s1  pae_int=27.52  plddt_binder=85.8  5.79s
+The distance between residues 75 and 76 is 22.22 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_42_s2  pae_int=27.17  plddt_binder=91.7  5.85s
+The distance between residues 75 and 76 is 22.22 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_42_s3  pae_int=27.18  plddt_binder=82.9  5.82s
+The distance between residues 75 and 76 is 22.22 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_42_s4  pae_int=25.83  plddt_binder=91.6  5.85s
+The distance between residues 75 and 76 is 52.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_44_s1  pae_int=26.70  plddt_binder=86.5  5.81s
+The distance between residues 75 and 76 is 52.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_44_s2  pae_int=26.76  plddt_binder=88.1  5.77s
+The distance between residues 75 and 76 is 52.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_44_s3  pae_int=23.25  plddt_binder=91.8  6.97s
+The distance between residues 75 and 76 is 52.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_44_s4  pae_int=26.76  plddt_binder=85.0  5.9s
+The distance between residues 75 and 76 is 47.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_45_s1  pae_int=5.52  plddt_binder=93.2  5.79s
+The distance between residues 75 and 76 is 47.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_45_s2  pae_int=26.59  plddt_binder=89.9  5.82s
+The distance between residues 75 and 76 is 47.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_45_s3  pae_int=5.65  plddt_binder=93.3  5.83s
+The distance between residues 75 and 76 is 47.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_45_s4  pae_int=6.30  plddt_binder=92.8  5.83s
+The distance between residues 75 and 76 is 23.79 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_46_s1  pae_int=14.08  plddt_binder=92.5  5.83s
+The distance between residues 75 and 76 is 23.79 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_46_s2  pae_int=25.73  plddt_binder=96.5  5.78s
+The distance between residues 75 and 76 is 23.79 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_46_s3  pae_int=8.97  plddt_binder=93.1  5.82s
+The distance between residues 75 and 76 is 23.79 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_46_s4  pae_int=6.45  plddt_binder=93.1  5.86s
+The distance between residues 75 and 76 is 34.18 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_47_s1  pae_int=25.91  plddt_binder=57.8  5.84s
+The distance between residues 75 and 76 is 34.18 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_47_s2  pae_int=5.92  plddt_binder=91.9  5.84s
+The distance between residues 75 and 76 is 34.18 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_47_s3  pae_int=7.10  plddt_binder=89.9  5.85s
+The distance between residues 75 and 76 is 34.18 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_47_s4  pae_int=5.56  plddt_binder=92.1  5.97s
+The distance between residues 75 and 76 is 33.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_48_s1  pae_int=26.81  plddt_binder=91.8  6.98s
+The distance between residues 75 and 76 is 33.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_48_s2  pae_int=26.93  plddt_binder=91.2  5.88s
+The distance between residues 75 and 76 is 33.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_48_s3  pae_int=27.75  plddt_binder=57.4  5.9s
+The distance between residues 75 and 76 is 33.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_48_s4  pae_int=26.56  plddt_binder=87.5  5.88s
+The distance between residues 75 and 76 is 32.81 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_49_s1  pae_int=22.93  plddt_binder=82.6  5.93s
+The distance between residues 75 and 76 is 32.81 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_49_s2  pae_int=19.83  plddt_binder=89.7  5.88s
+The distance between residues 75 and 76 is 32.81 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_49_s3  pae_int=24.10  plddt_binder=65.0  5.82s
+The distance between residues 75 and 76 is 32.81 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_49_s4  pae_int=8.30  plddt_binder=86.7  5.87s
+The distance between residues 75 and 76 is 22.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_50_s1  pae_int=26.27  plddt_binder=91.2  5.83s
+The distance between residues 75 and 76 is 22.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_50_s2  pae_int=26.19  plddt_binder=93.6  5.84s
+The distance between residues 75 and 76 is 22.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_50_s3  pae_int=25.76  plddt_binder=95.5  5.78s
+The distance between residues 75 and 76 is 22.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_50_s4  pae_int=25.64  plddt_binder=95.9  5.81s
+The distance between residues 75 and 76 is 10.59 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_52_s1  pae_int=25.94  plddt_binder=68.1  5.84s
+The distance between residues 75 and 76 is 10.59 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_52_s2  pae_int=26.58  plddt_binder=93.1  5.82s
+The distance between residues 75 and 76 is 10.59 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_52_s3  pae_int=26.14  plddt_binder=95.0  5.84s
+The distance between residues 75 and 76 is 10.59 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_52_s4  pae_int=25.84  plddt_binder=84.4  7.01s
+The distance between residues 75 and 76 is 25.96 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_53_s1  pae_int=26.22  plddt_binder=78.1  5.84s
+The distance between residues 75 and 76 is 25.96 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_53_s2  pae_int=25.79  plddt_binder=93.8  5.88s
+The distance between residues 75 and 76 is 25.96 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_53_s3  pae_int=26.40  plddt_binder=55.3  5.86s
+The distance between residues 75 and 76 is 25.96 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_53_s4  pae_int=26.63  plddt_binder=89.3  5.88s
+The distance between residues 75 and 76 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_54_s1  pae_int=25.17  plddt_binder=92.6  5.97s
+The distance between residues 75 and 76 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_54_s2  pae_int=23.89  plddt_binder=63.4  5.83s
+The distance between residues 75 and 76 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_54_s3  pae_int=26.55  plddt_binder=71.6  5.8s
+The distance between residues 75 and 76 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_54_s4  pae_int=26.99  plddt_binder=91.2  5.78s
+The distance between residues 75 and 76 is 25.00 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_55_s1  pae_int=5.77  plddt_binder=91.4  5.81s
+The distance between residues 75 and 76 is 25.00 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_55_s2  pae_int=25.78  plddt_binder=56.9  5.83s
+The distance between residues 75 and 76 is 25.00 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_55_s3  pae_int=26.97  plddt_binder=65.5  5.78s
+The distance between residues 75 and 76 is 25.00 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_55_s4  pae_int=10.53  plddt_binder=84.7  5.82s
+The distance between residues 75 and 76 is 24.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_56_s1  pae_int=26.33  plddt_binder=93.1  5.8s
+The distance between residues 75 and 76 is 24.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_56_s2  pae_int=23.44  plddt_binder=78.2  5.85s
+The distance between residues 75 and 76 is 24.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_56_s3  pae_int=26.19  plddt_binder=94.5  6.98s
+The distance between residues 75 and 76 is 24.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_56_s4  pae_int=24.87  plddt_binder=86.2  5.85s
+The distance between residues 75 and 76 is 30.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_57_s1  pae_int=26.82  plddt_binder=95.9  5.88s
+The distance between residues 75 and 76 is 30.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_57_s2  pae_int=25.62  plddt_binder=96.0  5.85s
+The distance between residues 75 and 76 is 30.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_57_s3  pae_int=26.94  plddt_binder=96.6  5.79s
+The distance between residues 75 and 76 is 30.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_57_s4  pae_int=26.29  plddt_binder=96.2  5.83s
+The distance between residues 75 and 76 is 23.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_58_s1  pae_int=27.13  plddt_binder=66.3  5.83s
+The distance between residues 75 and 76 is 23.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_58_s2  pae_int=25.56  plddt_binder=93.3  5.89s
+The distance between residues 75 and 76 is 23.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_58_s3  pae_int=27.60  plddt_binder=72.1  5.84s
+The distance between residues 75 and 76 is 23.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_58_s4  pae_int=24.62  plddt_binder=70.2  5.87s
+The distance between residues 75 and 76 is 33.84 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_59_s1  pae_int=26.52  plddt_binder=54.5  5.87s
+The distance between residues 75 and 76 is 33.84 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_59_s2  pae_int=27.45  plddt_binder=68.3  5.76s
+The distance between residues 75 and 76 is 33.84 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_59_s3  pae_int=26.97  plddt_binder=63.3  5.82s
+The distance between residues 75 and 76 is 33.84 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_59_s4  pae_int=26.37  plddt_binder=70.2  5.77s
+The distance between residues 75 and 76 is 29.37 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_5_s1  pae_int=22.94  plddt_binder=70.3  6.93s
+The distance between residues 75 and 76 is 29.37 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_5_s2  pae_int=22.27  plddt_binder=69.2  5.88s
+The distance between residues 75 and 76 is 29.37 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_5_s3  pae_int=23.84  plddt_binder=89.6  5.81s
+The distance between residues 75 and 76 is 29.37 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_5_s4  pae_int=25.04  plddt_binder=93.6  5.83s
+The distance between residues 75 and 76 is 53.05 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_60_s1  pae_int=21.40  plddt_binder=93.9  5.83s
+The distance between residues 75 and 76 is 53.05 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_60_s2  pae_int=10.78  plddt_binder=92.4  5.81s
+The distance between residues 75 and 76 is 53.05 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_60_s3  pae_int=23.48  plddt_binder=94.0  5.83s
+The distance between residues 75 and 76 is 53.05 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_60_s4  pae_int=16.18  plddt_binder=91.7  5.8s
+The distance between residues 75 and 76 is 23.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_61_s1  pae_int=24.16  plddt_binder=85.7  5.86s
+The distance between residues 75 and 76 is 23.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_61_s2  pae_int=25.00  plddt_binder=83.1  5.8s
+The distance between residues 75 and 76 is 23.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_61_s3  pae_int=24.35  plddt_binder=81.8  5.81s
+The distance between residues 75 and 76 is 23.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_61_s4  pae_int=25.05  plddt_binder=87.0  5.8s
+The distance between residues 75 and 76 is 23.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_62_s1  pae_int=27.71  plddt_binder=80.2  5.79s
+The distance between residues 75 and 76 is 23.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_62_s3  pae_int=26.95  plddt_binder=74.7  5.84s
+The distance between residues 75 and 76 is 23.86 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_62_s4  pae_int=27.15  plddt_binder=74.5  5.79s
+The distance between residues 75 and 76 is 27.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_63_s1  pae_int=27.05  plddt_binder=70.7  6.99s
+The distance between residues 75 and 76 is 27.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_63_s2  pae_int=9.38  plddt_binder=83.5  5.89s
+The distance between residues 75 and 76 is 27.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_63_s3  pae_int=27.91  plddt_binder=75.2  5.86s
+The distance between residues 75 and 76 is 27.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_63_s4  pae_int=26.20  plddt_binder=88.1  5.87s
+The distance between residues 75 and 76 is 43.02 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_64_s1  pae_int=24.93  plddt_binder=62.9  5.91s
+The distance between residues 75 and 76 is 43.02 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_64_s2  pae_int=17.00  plddt_binder=70.0  5.83s
+The distance between residues 75 and 76 is 43.02 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_64_s3  pae_int=24.58  plddt_binder=62.5  5.83s
+The distance between residues 75 and 76 is 43.02 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_64_s4  pae_int=24.75  plddt_binder=57.5  5.9s
+The distance between residues 75 and 76 is 32.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_6_s1  pae_int=26.41  plddt_binder=67.5  5.87s
+The distance between residues 75 and 76 is 32.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_6_s2  pae_int=26.54  plddt_binder=71.0  5.82s
+The distance between residues 75 and 76 is 32.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_6_s3  pae_int=26.22  plddt_binder=70.8  5.84s
+The distance between residues 75 and 76 is 32.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_6_s4  pae_int=21.09  plddt_binder=68.3  5.84s
+The distance between residues 75 and 76 is 55.76 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_8_s1  pae_int=27.29  plddt_binder=91.3  5.79s
+The distance between residues 75 and 76 is 55.76 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_8_s2  pae_int=24.33  plddt_binder=93.0  5.86s
+The distance between residues 75 and 76 is 55.76 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_8_s3  pae_int=10.34  plddt_binder=88.2  6.98s
+The distance between residues 75 and 76 is 55.76 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] classCL75_8_s4  pae_int=15.62  plddt_binder=89.8  5.84s
+The distance between residues 85 and 86 is 25.59 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_0_s1  pae_int=25.99  plddt_binder=95.6  119.78s
+The distance between residues 85 and 86 is 25.59 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_0_s2  pae_int=25.42  plddt_binder=92.9  6.86s
+The distance between residues 85 and 86 is 25.59 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_0_s3  pae_int=25.38  plddt_binder=96.1  6.69s
+The distance between residues 85 and 86 is 25.59 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_0_s4  pae_int=25.80  plddt_binder=93.4  6.69s
+The distance between residues 85 and 86 is 19.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_11_s1  pae_int=26.96  plddt_binder=74.0  6.66s
+The distance between residues 85 and 86 is 19.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_11_s2  pae_int=24.80  plddt_binder=90.2  6.75s
+The distance between residues 85 and 86 is 19.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_11_s3  pae_int=24.96  plddt_binder=74.1  6.64s
+The distance between residues 85 and 86 is 19.07 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_11_s4  pae_int=25.83  plddt_binder=84.2  6.66s
+The distance between residues 85 and 86 is 31.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_12_s1  pae_int=12.98  plddt_binder=86.5  6.72s
+The distance between residues 85 and 86 is 31.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_12_s2  pae_int=20.63  plddt_binder=86.2  7.82s
+The distance between residues 85 and 86 is 31.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_12_s3  pae_int=7.31  plddt_binder=87.4  6.74s
+The distance between residues 85 and 86 is 31.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_12_s4  pae_int=23.92  plddt_binder=90.6  6.7s
+The distance between residues 85 and 86 is 37.56 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_13_s1  pae_int=12.44  plddt_binder=91.6  6.67s
+The distance between residues 85 and 86 is 37.56 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_13_s2  pae_int=11.32  plddt_binder=88.3  6.7s
+The distance between residues 85 and 86 is 37.56 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_13_s3  pae_int=12.06  plddt_binder=90.8  6.7s
+The distance between residues 85 and 86 is 37.56 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_13_s4  pae_int=8.42  plddt_binder=92.6  6.7s
+The distance between residues 85 and 86 is 16.62 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_14_s1  pae_int=16.05  plddt_binder=94.2  6.65s
+The distance between residues 85 and 86 is 16.62 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_14_s2  pae_int=25.14  plddt_binder=95.9  6.6s
+The distance between residues 85 and 86 is 16.62 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_14_s3  pae_int=15.66  plddt_binder=93.1  6.7s
+The distance between residues 85 and 86 is 16.62 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_14_s4  pae_int=25.20  plddt_binder=95.7  6.67s
+The distance between residues 85 and 86 is 19.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_15_s1  pae_int=24.11  plddt_binder=83.5  6.57s
+The distance between residues 85 and 86 is 19.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_15_s2  pae_int=18.75  plddt_binder=83.4  6.63s
+The distance between residues 85 and 86 is 19.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_15_s3  pae_int=18.84  plddt_binder=89.5  6.57s
+The distance between residues 85 and 86 is 19.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_15_s4  pae_int=9.15  plddt_binder=90.3  6.65s
+The distance between residues 85 and 86 is 21.43 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_16_s1  pae_int=27.12  plddt_binder=56.4  6.63s
+The distance between residues 85 and 86 is 21.43 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_16_s2  pae_int=25.91  plddt_binder=88.5  6.66s
+The distance between residues 85 and 86 is 21.43 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_16_s3  pae_int=26.52  plddt_binder=59.7  6.65s
+The distance between residues 85 and 86 is 21.43 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_16_s4  pae_int=25.83  plddt_binder=88.6  6.61s
+The distance between residues 85 and 86 is 26.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_17_s1  pae_int=9.38  plddt_binder=92.3  8.33s
+The distance between residues 85 and 86 is 26.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_17_s2  pae_int=26.79  plddt_binder=94.9  6.74s
+The distance between residues 85 and 86 is 26.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_17_s3  pae_int=12.06  plddt_binder=92.9  6.74s
+The distance between residues 85 and 86 is 26.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_17_s4  pae_int=26.56  plddt_binder=93.4  6.59s
+The distance between residues 85 and 86 is 48.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_18_s1  pae_int=6.07  plddt_binder=90.5  6.72s
+The distance between residues 85 and 86 is 48.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_18_s2  pae_int=15.38  plddt_binder=85.9  6.7s
+The distance between residues 85 and 86 is 48.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_18_s3  pae_int=18.08  plddt_binder=76.8  6.65s
+The distance between residues 85 and 86 is 48.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_18_s4  pae_int=17.28  plddt_binder=88.8  6.71s
+The distance between residues 85 and 86 is 44.20 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_19_s2  pae_int=24.58  plddt_binder=83.0  6.62s
+The distance between residues 85 and 86 is 44.20 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_19_s3  pae_int=26.03  plddt_binder=89.4  6.62s
+The distance between residues 85 and 86 is 44.20 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_19_s4  pae_int=26.18  plddt_binder=66.1  6.64s
+The distance between residues 85 and 86 is 36.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_1_s1  pae_int=25.74  plddt_binder=92.4  6.67s
+The distance between residues 85 and 86 is 36.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_1_s2  pae_int=26.08  plddt_binder=93.7  6.69s
+The distance between residues 85 and 86 is 36.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_1_s3  pae_int=26.42  plddt_binder=93.5  6.71s
+The distance between residues 85 and 86 is 36.50 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_1_s4  pae_int=26.35  plddt_binder=91.2  6.64s
+The distance between residues 85 and 86 is 47.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_20_s1  pae_int=19.70  plddt_binder=90.6  6.66s
+The distance between residues 85 and 86 is 47.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_20_s2  pae_int=13.67  plddt_binder=86.8  6.68s
+The distance between residues 85 and 86 is 47.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_20_s3  pae_int=25.98  plddt_binder=93.4  6.65s
+The distance between residues 85 and 86 is 47.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_20_s4  pae_int=25.02  plddt_binder=92.4  6.59s
+The distance between residues 85 and 86 is 40.12 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_21_s1  pae_int=26.84  plddt_binder=92.8  6.66s
+The distance between residues 85 and 86 is 40.12 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_21_s2  pae_int=26.94  plddt_binder=88.7  8.25s
+The distance between residues 85 and 86 is 40.12 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_21_s3  pae_int=26.62  plddt_binder=93.7  6.69s
+The distance between residues 85 and 86 is 40.12 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_21_s4  pae_int=26.45  plddt_binder=92.2  6.68s
+The distance between residues 85 and 86 is 42.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_22_s1  pae_int=20.74  plddt_binder=87.2  6.71s
+The distance between residues 85 and 86 is 42.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_22_s2  pae_int=25.50  plddt_binder=90.1  6.65s
+The distance between residues 85 and 86 is 42.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_22_s3  pae_int=23.79  plddt_binder=91.7  6.7s
+The distance between residues 85 and 86 is 42.93 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_22_s4  pae_int=27.23  plddt_binder=86.4  6.65s
+The distance between residues 85 and 86 is 25.66 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_23_s1  pae_int=26.88  plddt_binder=95.2  6.63s
+The distance between residues 85 and 86 is 25.66 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_23_s2  pae_int=26.72  plddt_binder=94.7  6.62s
+The distance between residues 85 and 86 is 25.66 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_23_s3  pae_int=26.71  plddt_binder=91.9  6.69s
+The distance between residues 85 and 86 is 25.66 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_23_s4  pae_int=26.37  plddt_binder=86.5  6.65s
+The distance between residues 85 and 86 is 16.69 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_24_s1  pae_int=26.77  plddt_binder=94.9  6.65s
+The distance between residues 85 and 86 is 16.69 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_24_s2  pae_int=27.26  plddt_binder=90.9  6.59s
+The distance between residues 85 and 86 is 16.69 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_24_s3  pae_int=26.62  plddt_binder=93.4  6.62s
+The distance between residues 85 and 86 is 16.69 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_24_s4  pae_int=25.87  plddt_binder=95.8  6.65s
+The distance between residues 85 and 86 is 19.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_27_s1  pae_int=24.47  plddt_binder=85.7  6.62s
+The distance between residues 85 and 86 is 19.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_27_s2  pae_int=25.30  plddt_binder=83.3  6.61s
+The distance between residues 85 and 86 is 19.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_27_s3  pae_int=25.58  plddt_binder=84.8  6.66s
+The distance between residues 85 and 86 is 19.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_27_s4  pae_int=25.94  plddt_binder=92.4  6.52s
+The distance between residues 85 and 86 is 32.14 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_28_s1  pae_int=26.61  plddt_binder=80.3  8.22s
+The distance between residues 85 and 86 is 32.14 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_28_s2  pae_int=25.97  plddt_binder=81.4  6.69s
+The distance between residues 85 and 86 is 32.14 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_28_s3  pae_int=26.99  plddt_binder=89.6  6.68s
+The distance between residues 85 and 86 is 32.14 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_28_s4  pae_int=25.68  plddt_binder=87.1  6.72s
+The distance between residues 85 and 86 is 7.64 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_29_s1  pae_int=23.77  plddt_binder=90.8  6.68s
+The distance between residues 85 and 86 is 7.64 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_29_s2  pae_int=25.79  plddt_binder=88.5  6.66s
+The distance between residues 85 and 86 is 7.64 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_29_s3  pae_int=25.87  plddt_binder=66.1  6.67s
+The distance between residues 85 and 86 is 7.64 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_29_s4  pae_int=24.90  plddt_binder=86.1  6.66s
+The distance between residues 85 and 86 is 60.60 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_2_s1  pae_int=17.88  plddt_binder=92.2  6.66s
+The distance between residues 85 and 86 is 60.60 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_2_s2  pae_int=26.73  plddt_binder=88.3  6.66s
+The distance between residues 85 and 86 is 60.60 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_2_s3  pae_int=26.95  plddt_binder=90.9  6.65s
+The distance between residues 85 and 86 is 60.60 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_2_s4  pae_int=17.09  plddt_binder=85.5  6.67s
+The distance between residues 85 and 86 is 37.88 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_31_s1  pae_int=25.72  plddt_binder=94.8  6.64s
+The distance between residues 85 and 86 is 37.88 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_31_s2  pae_int=26.10  plddt_binder=92.2  6.68s
+The distance between residues 85 and 86 is 37.88 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_31_s3  pae_int=25.43  plddt_binder=95.9  6.5s
+The distance between residues 85 and 86 is 37.88 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_31_s4  pae_int=26.70  plddt_binder=95.7  6.62s
+The distance between residues 85 and 86 is 30.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_32_s1  pae_int=24.34  plddt_binder=90.8  6.64s
+The distance between residues 85 and 86 is 30.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_32_s2  pae_int=25.11  plddt_binder=93.2  6.64s
+The distance between residues 85 and 86 is 30.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_32_s3  pae_int=26.39  plddt_binder=93.9  6.6s
+The distance between residues 85 and 86 is 30.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_32_s4  pae_int=25.37  plddt_binder=94.6  8.28s
+The distance between residues 85 and 86 is 38.62 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_33_s1  pae_int=25.24  plddt_binder=94.7  6.55s
+The distance between residues 85 and 86 is 38.62 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_33_s2  pae_int=25.03  plddt_binder=93.9  6.76s
+The distance between residues 85 and 86 is 38.62 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_33_s3  pae_int=25.41  plddt_binder=84.5  6.66s
+The distance between residues 85 and 86 is 38.62 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_33_s4  pae_int=24.20  plddt_binder=92.5  6.68s
+The distance between residues 85 and 86 is 25.20 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_35_s1  pae_int=26.44  plddt_binder=92.4  6.71s
+The distance between residues 85 and 86 is 25.20 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_35_s2  pae_int=26.27  plddt_binder=92.2  6.6s
+The distance between residues 85 and 86 is 25.20 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_35_s3  pae_int=26.94  plddt_binder=94.8  6.65s
+The distance between residues 85 and 86 is 25.20 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_35_s4  pae_int=26.38  plddt_binder=96.1  6.63s
+The distance between residues 85 and 86 is 42.08 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_36_s1  pae_int=10.73  plddt_binder=88.9  6.67s
+The distance between residues 85 and 86 is 42.08 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_36_s2  pae_int=13.78  plddt_binder=89.0  6.66s
+The distance between residues 85 and 86 is 42.08 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_36_s3  pae_int=12.98  plddt_binder=88.5  6.57s
+The distance between residues 85 and 86 is 42.08 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_36_s4  pae_int=13.36  plddt_binder=88.4  6.65s
+The distance between residues 85 and 86 is 39.35 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_37_s1  pae_int=4.45  plddt_binder=95.3  6.63s
+The distance between residues 85 and 86 is 39.35 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_37_s2  pae_int=26.08  plddt_binder=79.8  6.68s
+The distance between residues 85 and 86 is 39.35 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_37_s3  pae_int=26.46  plddt_binder=71.8  6.66s
+The distance between residues 85 and 86 is 39.35 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_37_s4  pae_int=27.11  plddt_binder=71.0  6.55s
+The distance between residues 85 and 86 is 18.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_38_s1  pae_int=23.17  plddt_binder=87.2  6.78s
+The distance between residues 85 and 86 is 18.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_38_s2  pae_int=26.47  plddt_binder=90.0  6.63s
+The distance between residues 85 and 86 is 18.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_38_s3  pae_int=24.78  plddt_binder=91.7  6.64s
+The distance between residues 85 and 86 is 18.33 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_38_s4  pae_int=10.71  plddt_binder=89.4  8.3s
+The distance between residues 85 and 86 is 17.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_39_s1  pae_int=26.04  plddt_binder=95.4  6.6s
+The distance between residues 85 and 86 is 17.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_39_s2  pae_int=26.09  plddt_binder=88.7  6.69s
+The distance between residues 85 and 86 is 17.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_39_s3  pae_int=25.42  plddt_binder=95.6  6.67s
+The distance between residues 85 and 86 is 17.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_39_s4  pae_int=26.62  plddt_binder=95.0  6.74s
+The distance between residues 85 and 86 is 39.83 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_3_s1  pae_int=26.72  plddt_binder=90.2  6.68s
+The distance between residues 85 and 86 is 39.83 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_3_s3  pae_int=26.14  plddt_binder=93.1  6.6s
+The distance between residues 85 and 86 is 39.83 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_3_s4  pae_int=26.40  plddt_binder=86.9  6.71s
+The distance between residues 85 and 86 is 38.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_40_s1  pae_int=24.83  plddt_binder=82.1  6.62s
+The distance between residues 85 and 86 is 38.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_40_s2  pae_int=9.86  plddt_binder=84.7  6.66s
+The distance between residues 85 and 86 is 38.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_40_s3  pae_int=15.68  plddt_binder=77.5  6.65s
+The distance between residues 85 and 86 is 38.03 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_40_s4  pae_int=8.53  plddt_binder=87.6  6.52s
+The distance between residues 85 and 86 is 18.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_41_s1  pae_int=26.61  plddt_binder=74.8  6.65s
+The distance between residues 85 and 86 is 18.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_41_s2  pae_int=26.33  plddt_binder=94.7  6.62s
+The distance between residues 85 and 86 is 18.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_41_s3  pae_int=25.68  plddt_binder=94.1  6.68s
+The distance between residues 85 and 86 is 18.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_41_s4  pae_int=25.63  plddt_binder=93.8  6.67s
+The distance between residues 85 and 86 is 33.71 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_42_s1  pae_int=9.14  plddt_binder=88.6  6.56s
+The distance between residues 85 and 86 is 33.71 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_42_s2  pae_int=26.94  plddt_binder=91.7  6.65s
+The distance between residues 85 and 86 is 33.71 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_42_s3  pae_int=26.80  plddt_binder=92.2  6.64s
+The distance between residues 85 and 86 is 33.71 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_42_s4  pae_int=26.21  plddt_binder=90.9  8.21s
+The distance between residues 85 and 86 is 35.17 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_44_s1  pae_int=26.08  plddt_binder=93.7  6.85s
+The distance between residues 85 and 86 is 35.17 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_44_s2  pae_int=26.29  plddt_binder=94.3  6.61s
+The distance between residues 85 and 86 is 35.17 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_44_s3  pae_int=25.80  plddt_binder=95.3  6.69s
+The distance between residues 85 and 86 is 35.17 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_44_s4  pae_int=26.04  plddt_binder=93.8  6.68s
+The distance between residues 85 and 86 is 26.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_45_s1  pae_int=12.59  plddt_binder=85.9  6.68s
+The distance between residues 85 and 86 is 26.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_45_s2  pae_int=6.66  plddt_binder=90.3  6.58s
+The distance between residues 85 and 86 is 26.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_45_s3  pae_int=10.08  plddt_binder=89.4  6.58s
+The distance between residues 85 and 86 is 26.74 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_45_s4  pae_int=25.54  plddt_binder=93.0  6.69s
+The distance between residues 85 and 86 is 31.15 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_46_s1  pae_int=8.59  plddt_binder=92.3  6.61s
+The distance between residues 85 and 86 is 31.15 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_46_s2  pae_int=7.28  plddt_binder=94.1  6.65s
+The distance between residues 85 and 86 is 31.15 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_46_s3  pae_int=5.55  plddt_binder=95.4  6.63s
+The distance between residues 85 and 86 is 31.15 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_46_s4  pae_int=26.76  plddt_binder=92.4  6.48s
+The distance between residues 85 and 86 is 23.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_47_s1  pae_int=27.06  plddt_binder=79.5  6.6s
+The distance between residues 85 and 86 is 23.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_47_s2  pae_int=7.05  plddt_binder=88.6  6.55s
+The distance between residues 85 and 86 is 23.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_47_s3  pae_int=5.00  plddt_binder=93.7  6.66s
+The distance between residues 85 and 86 is 23.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_47_s4  pae_int=5.91  plddt_binder=91.3  6.62s
+The distance between residues 85 and 86 is 12.44 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_48_s1  pae_int=27.23  plddt_binder=83.1  6.58s
+The distance between residues 85 and 86 is 12.44 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_48_s2  pae_int=27.74  plddt_binder=66.8  6.52s
+The distance between residues 85 and 86 is 12.44 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_48_s3  pae_int=26.28  plddt_binder=95.2  6.6s
+The distance between residues 85 and 86 is 12.44 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_48_s4  pae_int=26.84  plddt_binder=95.9  8.19s
+The distance between residues 85 and 86 is 32.52 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_49_s1  pae_int=8.04  plddt_binder=92.1  6.63s
+The distance between residues 85 and 86 is 32.52 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_49_s2  pae_int=17.89  plddt_binder=86.2  6.63s
+The distance between residues 85 and 86 is 32.52 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_49_s3  pae_int=10.19  plddt_binder=88.1  6.65s
+The distance between residues 85 and 86 is 32.52 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_49_s4  pae_int=26.84  plddt_binder=87.6  6.59s
+The distance between residues 85 and 86 is 34.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_4_s1  pae_int=25.57  plddt_binder=94.0  6.61s
+The distance between residues 85 and 86 is 34.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_4_s2  pae_int=27.38  plddt_binder=72.9  6.58s
+The distance between residues 85 and 86 is 34.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_4_s3  pae_int=26.46  plddt_binder=74.3  6.6s
+The distance between residues 85 and 86 is 34.11 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_4_s4  pae_int=25.78  plddt_binder=92.5  6.7s
+The distance between residues 85 and 86 is 8.42 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_51_s1  pae_int=26.57  plddt_binder=93.5  6.61s
+The distance between residues 85 and 86 is 8.42 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_51_s2  pae_int=26.54  plddt_binder=94.7  6.48s
+The distance between residues 85 and 86 is 8.42 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_51_s3  pae_int=26.37  plddt_binder=92.8  6.58s
+The distance between residues 85 and 86 is 8.42 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_51_s4  pae_int=26.57  plddt_binder=94.1  6.62s
+The distance between residues 85 and 86 is 20.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_52_s1  pae_int=26.61  plddt_binder=83.0  6.62s
+The distance between residues 85 and 86 is 20.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_52_s2  pae_int=26.67  plddt_binder=82.4  6.62s
+The distance between residues 85 and 86 is 20.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_52_s3  pae_int=20.19  plddt_binder=74.5  6.62s
+The distance between residues 85 and 86 is 20.46 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_52_s4  pae_int=12.18  plddt_binder=87.1  6.51s
+The distance between residues 85 and 86 is 34.18 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_53_s1  pae_int=26.71  plddt_binder=86.6  6.6s
+The distance between residues 85 and 86 is 34.18 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_53_s2  pae_int=26.60  plddt_binder=93.5  6.6s
+The distance between residues 85 and 86 is 34.18 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_53_s3  pae_int=27.16  plddt_binder=89.3  8.16s
+The distance between residues 85 and 86 is 34.18 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_53_s4  pae_int=26.58  plddt_binder=89.0  6.71s
+The distance between residues 85 and 86 is 34.63 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_54_s1  pae_int=7.57  plddt_binder=92.4  6.66s
+The distance between residues 85 and 86 is 34.63 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_54_s2  pae_int=6.03  plddt_binder=93.2  6.64s
+The distance between residues 85 and 86 is 34.63 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_54_s3  pae_int=6.31  plddt_binder=92.5  6.67s
+The distance between residues 85 and 86 is 34.63 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_54_s4  pae_int=8.93  plddt_binder=91.6  6.68s
+The distance between residues 85 and 86 is 52.04 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_55_s1  pae_int=17.39  plddt_binder=79.3  6.61s
+The distance between residues 85 and 86 is 52.04 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_55_s2  pae_int=19.10  plddt_binder=81.3  6.65s
+The distance between residues 85 and 86 is 52.04 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_55_s3  pae_int=25.14  plddt_binder=78.2  6.53s
+The distance between residues 85 and 86 is 52.04 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_55_s4  pae_int=23.10  plddt_binder=85.4  6.61s
+The distance between residues 85 and 86 is 48.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_56_s1  pae_int=25.36  plddt_binder=61.1  6.66s
+The distance between residues 85 and 86 is 48.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_56_s2  pae_int=26.07  plddt_binder=84.2  6.64s
+The distance between residues 85 and 86 is 48.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_56_s3  pae_int=27.48  plddt_binder=54.9  6.59s
+The distance between residues 85 and 86 is 48.26 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_56_s4  pae_int=26.01  plddt_binder=82.5  6.6s
+The distance between residues 85 and 86 is 24.95 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_58_s1  pae_int=24.17  plddt_binder=94.5  6.58s
+The distance between residues 85 and 86 is 24.95 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_58_s2  pae_int=25.42  plddt_binder=95.3  6.63s
+The distance between residues 85 and 86 is 24.95 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_58_s3  pae_int=25.32  plddt_binder=88.7  6.6s
+The distance between residues 85 and 86 is 24.95 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_58_s4  pae_int=23.81  plddt_binder=92.3  6.61s
+The distance between residues 85 and 86 is 52.37 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_59_s1  pae_int=26.09  plddt_binder=92.1  6.59s
+The distance between residues 85 and 86 is 52.37 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_59_s2  pae_int=25.77  plddt_binder=91.6  8.25s
+The distance between residues 85 and 86 is 52.37 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_59_s3  pae_int=27.49  plddt_binder=83.3  6.69s
+The distance between residues 85 and 86 is 52.37 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_59_s4  pae_int=27.31  plddt_binder=85.8  6.62s
+The distance between residues 85 and 86 is 39.54 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_5_s1  pae_int=26.77  plddt_binder=63.7  6.67s
+The distance between residues 85 and 86 is 39.54 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_5_s2  pae_int=26.60  plddt_binder=84.6  6.69s
+The distance between residues 85 and 86 is 39.54 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_5_s3  pae_int=23.59  plddt_binder=86.0  6.6s
+The distance between residues 85 and 86 is 39.54 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_5_s4  pae_int=7.54  plddt_binder=91.4  6.63s
+The distance between residues 85 and 86 is 17.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_61_s1  pae_int=22.80  plddt_binder=95.5  6.62s
+The distance between residues 85 and 86 is 17.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_61_s3  pae_int=25.35  plddt_binder=95.5  6.62s
+The distance between residues 85 and 86 is 17.27 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_61_s4  pae_int=17.96  plddt_binder=94.5  6.61s
+The distance between residues 85 and 86 is 45.89 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_62_s1  pae_int=26.28  plddt_binder=91.1  6.63s
+The distance between residues 85 and 86 is 45.89 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_62_s2  pae_int=25.58  plddt_binder=91.7  6.53s
+The distance between residues 85 and 86 is 45.89 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_62_s3  pae_int=27.10  plddt_binder=92.9  6.6s
+The distance between residues 85 and 86 is 45.89 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_62_s4  pae_int=12.53  plddt_binder=66.8  6.62s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_63_s1  pae_int=25.97  plddt_binder=96.4  6.54s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_63_s2  pae_int=24.61  plddt_binder=96.8  6.62s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_63_s3  pae_int=21.31  plddt_binder=96.0  6.65s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_63_s4  pae_int=26.22  plddt_binder=96.9  6.57s
+The distance between residues 85 and 86 is 25.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_64_s1  pae_int=26.15  plddt_binder=95.4  6.54s
+The distance between residues 85 and 86 is 25.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_64_s2  pae_int=26.80  plddt_binder=92.0  6.6s
+The distance between residues 85 and 86 is 25.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_64_s3  pae_int=25.09  plddt_binder=93.2  8.23s
+The distance between residues 85 and 86 is 25.41 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_64_s4  pae_int=24.09  plddt_binder=95.5  6.71s
+The distance between residues 85 and 86 is 28.82 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_65_s1  pae_int=24.23  plddt_binder=86.7  6.7s
+The distance between residues 85 and 86 is 28.82 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_65_s2  pae_int=25.87  plddt_binder=90.2  6.58s
+The distance between residues 85 and 86 is 28.82 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_65_s3  pae_int=25.21  plddt_binder=92.3  6.69s
+The distance between residues 85 and 86 is 28.82 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_65_s4  pae_int=25.56  plddt_binder=94.2  6.62s
+The distance between residues 85 and 86 is 18.23 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_6_s1  pae_int=25.97  plddt_binder=94.5  6.64s
+The distance between residues 85 and 86 is 18.23 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_6_s2  pae_int=25.15  plddt_binder=95.7  6.64s
+The distance between residues 85 and 86 is 18.23 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_6_s3  pae_int=26.23  plddt_binder=93.7  6.56s
+The distance between residues 85 and 86 is 18.23 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_6_s4  pae_int=26.25  plddt_binder=95.5  6.63s
+The distance between residues 85 and 86 is 33.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_7_s1  pae_int=14.08  plddt_binder=80.6  6.59s
+The distance between residues 85 and 86 is 33.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_7_s2  pae_int=24.29  plddt_binder=75.1  6.6s
+The distance between residues 85 and 86 is 33.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_7_s3  pae_int=25.52  plddt_binder=54.7  6.61s
+The distance between residues 85 and 86 is 33.34 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_7_s4  pae_int=11.00  plddt_binder=92.0  6.62s
+The distance between residues 85 and 86 is 21.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_8_s1  pae_int=27.12  plddt_binder=80.5  6.5s
+The distance between residues 85 and 86 is 21.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_8_s2  pae_int=25.57  plddt_binder=90.8  6.62s
+The distance between residues 85 and 86 is 21.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_8_s3  pae_int=27.20  plddt_binder=86.3  6.71s
+The distance between residues 85 and 86 is 21.80 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] classCL85_8_s4  pae_int=26.36  plddt_binder=95.6  6.59s
+
+[af2ig] 607 ok, 0 failed, 4175.6s total, 6.9s/design
+AF2CECD_DONE

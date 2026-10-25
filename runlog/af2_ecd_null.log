@@ -1,0 +1,26 @@
+WARNING:tensorflow:From /home/HarjasG/tnf-track3/dl_binder_design/af2_initial_guess/alphafold/model/tf/input_pipeline.py:151: calling map_fn (from tensorflow.python.ops.map_fn) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Use fn_output_signature instead
+[af2ig] backend=gpu devices=[cuda(id=0)]
+[af2ig] 6 designs, 1 distinct lengths -> 1 compiles (~2 min) + ~1 min inference
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] SHUF_classCL85_28_s3  pae_int=27.13  plddt_binder=60.5  121.11s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] SHUF_classCL85_28_s4  pae_int=26.05  plddt_binder=59.4  6.86s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] SHUF_classCL85_32_s1  pae_int=26.96  plddt_binder=61.1  6.63s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] SHUF_classCL85_44_s1  pae_int=26.53  plddt_binder=49.4  6.7s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] SHUF_classCL85_58_s2  pae_int=27.13  plddt_binder=69.2  6.7s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] SHUF_classCL85_65_s2  pae_int=27.44  plddt_binder=71.7  6.7s
+
+[af2ig] 6 ok, 0 failed, 154.8s total, 25.8s/design
+NULL_DONE

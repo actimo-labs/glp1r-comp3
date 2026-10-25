@@ -1,0 +1,32 @@
+WARNING:tensorflow:From /home/HarjasG/tnf-track3/dl_binder_design/af2_initial_guess/alphafold/model/tf/input_pipeline.py:151: calling map_fn (from tensorflow.python.ops.map_fn) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Use fn_output_signature instead
+[af2ig] backend=gpu devices=[cuda(id=0)]
+[af2ig] 8 designs, 2 distinct lengths -> 2 compiles (~4 min) + ~1 min inference
+The distance between residues 75 and 76 is 33.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] NEGBIND_L75_0  pae_int=27.65  plddt_binder=87.4  110.6s
+The distance between residues 75 and 76 is 33.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] NEGBIND_L75_1  pae_int=25.80  plddt_binder=91.8  6.05s
+The distance between residues 75 and 76 is 33.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] NEGBIND_L75_2  pae_int=26.58  plddt_binder=91.8  5.92s
+The distance between residues 75 and 76 is 33.53 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 75
+[af2ig] NEGBIND_L75_3  pae_int=26.57  plddt_binder=86.6  5.98s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] NEGBIND_L85_0  pae_int=26.52  plddt_binder=83.6  124.11s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] NEGBIND_L85_1  pae_int=26.83  plddt_binder=93.6  6.84s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] NEGBIND_L85_2  pae_int=25.94  plddt_binder=94.5  6.73s
+The distance between residues 85 and 86 is 43.25 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 85
+[af2ig] NEGBIND_L85_3  pae_int=26.86  plddt_binder=90.5  6.73s
+
+[af2ig] 8 ok, 0 failed, 273.1s total, 34.1s/design
+NULL2_DONE

@@ -33,7 +33,10 @@ from collections import defaultdict
 # AF2-ig gate for class C only. Pre-filter to keep the Boltz load affordable,
 # NOT the arbiter -- Boltz-2 is. Calibrated on negative controls, see
 # runlog/04-af2-triage-calibration.md.
-AF2_CUT = 22.0
+# Re-calibrated against folded non-binders in the MATCHED representation
+# (comp-02 designs at 75/85 aa threaded against the ECD): they score 25.80-27.65.
+# Our designs reach 4.35. Cut set well below the null; 145 of 607 pass.
+AF2_CUT = 20.0
 
 # Boltz-2 cuts, calibrated against FOLDED NON-BINDERS (comp-02 TNF designs
 # scored against GLP1R), which is the null that matters. See

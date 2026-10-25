@@ -156,3 +156,37 @@ so TMD clashes would still be caught.
 epitope, not default to "the biggest structure available". Classes A and B
 genuinely need the TMD and are therefore not AF2-scorable at all; class C does
 not, and is.
+
+---
+
+# ADDENDUM 3 — matched null confirms the ECD representation, and the cut
+
+Having moved class C scoring to the ECD, the null had to move with it: a cut
+calibrated on a 460-residue complex does not transfer to a 170-residue one.
+
+**First attempt failed usefully.** The matched-null builder could only produce
+shuffles — the comp-02 non-binders are 79–90 aa and none matched our 65/75/85
+backbone lengths, so zero folded controls were built. Shuffles scored 26.05–27.44
+with `plddt_binder` 49–72, i.e. they do not fold, which is the wrong failure
+mode. Rebuilt by selecting comp-02 sequences at *exactly* 75 and 85 aa.
+
+**Folded non-binders vs the ECD** (n=8):
+
+| | pae_interaction | plddt_binder |
+|---|---|---|
+| min | 25.80 | 83.6 |
+| median | 26.57 | 91.1 |
+| max | 27.65 | 94.5 |
+
+**Our class C designs**: best **4.35**, with 67 under 10, 108 under 15, 145
+under 20.
+
+A ~15-point separation between our best designs and proteins that fold well but
+have no reason to bind. For the third time, `plddt_binder` fails to
+discriminate: the non-binders sit at 83–94, the same band as our best designs.
+
+**Cut set to `pae_interaction < 20.0`**, comfortably below every folded
+non-binder, giving 145 class C candidates for a 60-slot shortlist.
+
+For the record, the full-receptor representation gave 0/197 passing. The
+representation change is worth roughly 145 candidates.
