@@ -30,7 +30,33 @@ import os
 import sys
 from collections import defaultdict
 
-AF2_CUT = 22.0          # below every negative control; native positive = 17.39
+# AF2-ig gate for class C only. Pre-filter to keep the Boltz load affordable,
+# NOT the arbiter -- Boltz-2 is. Calibrated on negative controls, see
+# runlog/04-af2-triage-calibration.md.
+AF2_CUT = 22.0
+
+# Boltz-2 cuts, calibrated against FOLDED NON-BINDERS (comp-02 TNF designs
+# scored against GLP1R), which is the null that matters. See
+# runlog/05-boltz-calibration.md.
+#
+#                      POS native   classC best   folded non-binder
+#   pae_interaction          4.56         12.55       20.04 - 28.66   <- separates
+#   ipTM                    0.949         0.942       0.113 - 0.561   <- separates
+#   plddt_binder             91.6          84.1         75.9 - 86.8   <- OVERLAPS
+#
+# plddt_binder measures foldedness, not binding: our designs sit inside the
+# non-binder band. An earlier calibration against SHUFFLED sequences gave the
+# opposite answer, because a shuffle tests "does not fold" rather than "does
+# not bind". Primary ranking is pae_interaction.
+#
+# ipTM is used here despite brief section 3 and the comp-02 non-negotiable
+# advising against it. Both were reasoning about a HOMOTRIMER target, where
+# global ipTM is dominated by target-internal chain pairs at ~0.9. GLP1R is a
+# single chain, so ipTM IS the binder-target pair and the separation is wide.
+BOLTZ_PAE_CUT = 20.0     # below every folded non-binder
+BOLTZ_IPTM_CUT = 0.56    # above every folded non-binder
+BOLTZ_PLDDT_MIN = 70.0   # sanity check only: did the binder fold at all
+
 MAX_PER_BACKBONE = 2
 
 
