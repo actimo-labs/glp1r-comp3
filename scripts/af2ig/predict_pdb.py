@@ -337,6 +337,28 @@ def main():
         pdbs = [p_ for p_ in pdbs
                 if os.path.basename(p_).rsplit(".", 1)[0] in keep]
 
+    # --- sort by complex length: this is worth hours ------------------------
+    # JAX retraces the whole model for every new input shape. Measured here:
+    # 122 s on a new length, 10.5 s on a repeat. Processing in filename order
+    # groups designs by BACKBONE, and each backbone has its own length, so
+    # every backbone pays the 122 s compile -- the worst possible ordering.
+    # Sorting by total residue count means each distinct length compiles once.
+    # On 1800 designs spanning ~31 lengths that is ~63 min of compile instead
+    # of ~15 h.
+    def n_res(p_):
+        seen = set()
+        for l in open(p_):
+            if l[:4] == "ATOM" and l[12:16].strip() == "CA":
+                seen.add((l[21], l[22:27]))
+        return len(seen)
+
+    sizes = {p_: n_res(p_) for p_ in pdbs}
+    pdbs.sort(key=lambda p_: (sizes[p_], p_))
+    n_shapes = len(set(sizes.values()))
+    print(f"[af2ig] {len(pdbs)} designs, {n_shapes} distinct lengths "
+          f"-> {n_shapes} compiles (~{n_shapes * 122 / 60:.0f} min) "
+          f"+ ~{(len(pdbs) - n_shapes) * 10.5 / 60:.0f} min inference")
+
     finished = set()
     if os.path.isfile(args.checkpoint_name):
         finished = {l.strip() for l in open(args.checkpoint_name) if l.strip()}
