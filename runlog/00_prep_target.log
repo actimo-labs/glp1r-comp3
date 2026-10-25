@@ -1,0 +1,28 @@
+chain R: 384 residues  29-423
+chain P: 30 residues  7-36
+
+ECD/TMD boundary computed at residue 136 (normalised cross-contacts 0.28)
+  ECD 29-129  (101 res)
+  TMD 136-423  (283 res)
+
+GLP-1 message module (7-15) contacts 27 receptor residues
+GLP-1 address helix  (16-36) contacts 29 receptor residues
+  message contacts that fall in the TMD: 27/27
+  address contacts that fall in the ECD: 17/29
+
+cross-check vs brief section 2 (NOT used to define anything):
+    M3.36b  231      modelled  NO contact < 4.5 A
+    Q3.37b  234      modelled  contacts message
+    N3.43b  240      modelled  NO contact < 4.5 A
+    H6.52b  363      modelled  NO contact < 4.5 A
+    E7.42b  387      modelled  contacts message
+    Q7.49b  394      modelled  NO contact < 4.5 A
+      ECL2  297      modelled  no contact
+
+wrote target/glp1r_R_full.pdb  3138 atoms
+wrote target/glp1r_TMD.pdb     2342 atoms
+wrote target/glp1r_ECD.pdb     796 atoms
+wrote target/hotspots.json
+
+class A hotspots (TMD): [141, 144, 145, 148, 152, 190, 194, 197, 201, 230, 233, 234, 237, 241, 298, 299, 300, 306, 309, 310, 313, 372, 380, 384, 387, 388, 391]
+class C hotspots (ECD): [30, 31, 32, 35, 36, 39, 43, 67, 68, 69, 88, 89, 90, 91, 121, 123, 128]
