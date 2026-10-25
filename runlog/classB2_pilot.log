@@ -1,0 +1,5 @@
+class B compliant: target=A29-53/A62-129/A136-155/A187-241/A280-317/A361-397
+                   hotspots=[A387,A234,A233,A391,A241] (deep pocket, receptor-derived only)
+=== classB len=90 : 2 designs ===
+classB len=90 rc=0 wall=390s designs=2 per_design=195s
+=== classB len=130 : 2 designs ===
