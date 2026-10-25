@@ -218,3 +218,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- glp1r-comp3 project overrides (appended during section-0 audit) ---
+# The Python template above ignores 'target/' and '*.log'; we need both tracked.
+!target/
+!target/**
+!runlog/*.log
+# Large artifacts stay out of git; paths recorded in manifests instead.
+rfdiff_out/
+boltz_out/
+mpnn_out/
+*.pt
+*.ckpt
+*.trr
+*.tar
