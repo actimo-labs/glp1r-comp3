@@ -37,6 +37,10 @@ TARGET_SEQ = (ROOT / "target/glp1r_R_full.seq").read_text().strip()
 TEMPLATE = ROOT / "target/glp1r_R_full.cif"
 BINDER_ID, TARGET_ID = "A", "B"
 
+# Absolute path: the boltz CLI is not on PATH inside a subprocess even when the
+# script itself is run by that env's python.
+BOLTZ_BIN = os.path.expanduser("~/miniforge3/envs/boltz/bin/boltz")
+
 
 def write_yaml(path, binder_seq):
     lines = ["version: 1", "sequences:",
@@ -137,7 +141,7 @@ def main():
     print(f"[boltz] {len(rows)} yaml -> {yaml_dir}")
 
     t0 = timer()
-    cmd = ["boltz", "predict", str(yaml_dir),
+    cmd = [BOLTZ_BIN, "predict", str(yaml_dir),
            "--out_dir", str(out),
            "--model", "boltz2",
            "--output_format", "pdb",
