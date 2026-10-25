@@ -289,9 +289,19 @@ Gates first, all of which a design must clear:
 3. **epitope** — interface not predominantly lipid-facing
 4. **de novo** — no run > 5 residues matching a natural incretin peptide
 
-Then ranked on `pae_interaction` ascending, `ipTM` descending as tie-break.
+Scores are the **mean of two Boltz seeds**, not one. Single-seed ranking proved
+noisy enough to matter: across the shortlist the mean |Δpae| between seeds was
+1.91 with a maximum of 8.85, and two designs that ranked in the top 7 on seed 1
+fell outside it on the two-seed mean. A seed-stability gate (|Δpae| < 3) is
+applied, and all 20 submitted designs clear it.
+
+Then ranked on mean `pae_interaction` ascending, `ipTM` descending as tie-break.
 `plddt_binder` is **not** used: it was shown three separate times to track
 foldedness rather than binding.
+
+Within class A, designs contacting **E387** are preferred before ranking on
+score, because activation is the objective and E387 is the free-α-amine partner.
+All 10 submitted class A designs contact it.
 
 **Per-class quotas, 10 A and 10 C, rather than one global ranking.** Ranking
 globally put 19 of 20 slots on class A. Two reasons to split instead: the
@@ -328,6 +338,48 @@ Stated plainly, because the selection prompt rewards calibrated claims.
   it was threaded onto GLP-1's backbone rather than its own — a non-native
   pairing. The calibration ceiling rests on a single positive.
 - **Designs span 29–423 of the receptor**, not the full 24–432 assay construct.
+
+---
+
+## 9a. Activation — what the structural evidence actually supports
+
+Full analysis in `runlog/08-activation-analysis.md`. Summary:
+
+**The ECD is conformationally invariant between receptor states.** Internal
+RMSD active vs inactive (6LN2, superposed over 277 TMD-core Cα; TM6 K346
+displacement 17.4 Å, matching the cited ~18 Å):
+
+| Domain | internal RMSD |
+|---|---|
+| ECD (29–129) | **1.21 Å** |
+| TMD (136–423) | 4.72 Å |
+
+The ECD reorients as a rigid body but does not change shape. A binder on the ECD
+groove therefore sees an identical surface in both states and has **no
+structural route to shifting the conformational equilibrium**. This is a
+mechanistic explanation for the published de novo GLP1R ECD binders (5.3 nM,
+27 nM) being **antagonists** — the epitope carries no state information.
+
+**Consequence: the 10 class C designs are expected to bind and not to activate.**
+They are submitted for the binding gate and the affinity ranking.
+
+**Class A carries the agonist case.** Their epitopes lie on the TMD, which does
+differ between states (4.72 Å internal), and the specific residues they contact
+shift 3.8–8.6 Å on activation. All 10 contact **E387**, most also Q234, M233,
+T391 and Y241.
+
+**What could not be computed.** Two of the five order parameters in the plan are
+unavailable: 6.32b (~343) lies inside the receptor's disordered 339–343 gap, and
+GLP1R's TM3 has no Arg at the derived 3.50b position, so class A DRY-motif
+arithmetic does not transfer. Verified and usable: P358/G361 (PxxG), K346,
+and the N240/H363/Q394 polar network.
+
+Order parameters were **not** computed on our own predicted complexes, because
+Boltz pins the receptor to the active-state template — every prediction looks
+active regardless of the binder, so the measurement would be circular.
+
+No design is predicted to activate. This is a structural proxy, uncalibrated
+against any efficacy measurement.
 
 ---
 
