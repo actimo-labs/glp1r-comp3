@@ -31,8 +31,12 @@ import sys
 import glob
 from timeit import default_timer as timer
 
+import numpy as np
+
 MPNN = os.path.expanduser("~/tnf-track3/ProteinMPNN")
 MPNN_PY = os.path.expanduser("~/miniforge3/envs/mpnn/bin/python")
+# (pdb path, chain) of the COMPLETE receptor used for validation
+FULL_TARGET = ("target/glp1r_R_full.pdb", "A")
 
 ONE2THREE = {
     "A": "ALA", "R": "ARG", "N": "ASN", "D": "ASP", "C": "CYS", "Q": "GLN",
@@ -92,8 +96,65 @@ def parse_fasta(fa):
     return out
 
 
-def thread(backbone_pdb, seq, out_pdb):
-    """Write binder chain A with `seq` on its backbone; target chains verbatim."""
+def superpose_to_original(backbone_pdb):
+    """
+    Rigid transform putting an RFdiffusion output back into the original
+    receptor frame.
+
+    RFdiffusion recentres its output: measured here, the target comes out
+    translated by 214.278 A with essentially no rotation (RMSD 0.133 A after
+    removing translation alone, 0.110 A after full superposition). So the
+    cropped target in the output can be swapped for the FULL receptor, which is
+    what validation should score against -- the crop exists only to make
+    generation affordable, not to define the target.
+
+    Returns (R, t) mapping output coords -> original frame, or None.
+    """
+    trb = backbone_pdb[:-4] + ".trb"
+    if not os.path.isfile(trb):
+        return None
+    import pickle
+    d = pickle.load(open(trb, "rb"))
+    ref, hal = d.get("receptor_con_ref_pdb_idx"), d.get("receptor_con_hal_pdb_idx")
+    if not ref or not hal:
+        return None
+    tmap = {h[1]: r[1] for r, h in zip(ref, hal)}
+
+    def ca(pdb, chain):
+        out = {}
+        for l in open(pdb):
+            if l[:4] == "ATOM" and l[21] == chain and l[12:16].strip() == "CA":
+                out[int(l[22:26])] = np.array(
+                    [float(l[30:38]), float(l[38:46]), float(l[46:54])])
+        return out
+
+    out_ca = ca(backbone_pdb, "B")
+    orig_ca = ca(FULL_TARGET[0], FULL_TARGET[1])
+    pairs = [(out_ca[h], orig_ca[r]) for h, r in tmap.items()
+             if h in out_ca and r in orig_ca]
+    if len(pairs) < 10:
+        return None
+    O = np.array([p[0] for p in pairs])
+    S = np.array([p[1] for p in pairs])
+    Oc, Sc = O - O.mean(0), S - S.mean(0)
+    H = Oc.T @ Sc
+    U, _, Vt = np.linalg.svd(H)
+    dsign = np.sign(np.linalg.det(Vt.T @ U.T))
+    R = Vt.T @ np.diag([1, 1, dsign]) @ U.T
+    t = S.mean(0) - (R @ O.mean(0))
+    return R, t
+
+
+def thread(backbone_pdb, seq, out_pdb, full_target=False):
+    """
+    Write binder chain A with `seq` on its backbone.
+
+    full_target=False: target chains copied verbatim (the cropped target, as
+                       generated). Cheap, and fine for backbone-level checks.
+    full_target=True : binder transformed back into the original receptor frame
+                       and paired with the COMPLETE receptor, which is what
+                       AF2-ig and Boltz should score against.
+    """
     binder_res, lines_by_chain = [], []
     for l in open(backbone_pdb):
         if l[:4] != "ATOM":
@@ -109,19 +170,41 @@ def thread(backbone_pdb, seq, out_pdb):
                          f"{len(binder_res)} binder residues, sequence has {len(seq)}")
     aamap = {n: ONE2THREE[a] for n, a in zip(binder_res, seq)}
 
+    xf = superpose_to_original(backbone_pdb) if full_target else None
+    if full_target and xf is None:
+        raise ValueError(f"{os.path.basename(backbone_pdb)}: cannot recover the "
+                         f"original frame (missing or unusable .trb)")
+
     serial = 0
     with open(out_pdb, "w") as f:
         for l in lines_by_chain:
-            if l[21] == "A":
-                if l[12:16].strip() not in BACKBONE:
-                    continue
-                serial += 1
-                f.write(l[:6] + f"{serial:5d}" + l[11:17]
-                        + aamap[int(l[22:26])] + l[20:])
-            else:
+            if l[21] != "A":
+                if full_target:
+                    continue          # cropped target dropped; full one added below
                 serial += 1
                 f.write(l[:6] + f"{serial:5d}" + l[11:])
-        f.write("TER\nEND\n")
+                continue
+            if l[12:16].strip() not in BACKBONE:
+                continue
+            serial += 1
+            if xf is not None:
+                R, t = xf
+                xyz = R @ np.array([float(l[30:38]), float(l[38:46]),
+                                    float(l[46:54])]) + t
+                coord = f"{xyz[0]:8.3f}{xyz[1]:8.3f}{xyz[2]:8.3f}"
+                f.write(l[:6] + f"{serial:5d}" + l[11:17] + aamap[int(l[22:26])]
+                        + l[20:30] + coord + l[54:])
+            else:
+                f.write(l[:6] + f"{serial:5d}" + l[11:17]
+                        + aamap[int(l[22:26])] + l[20:])
+        f.write("TER\n")
+        if full_target:
+            for l in open(FULL_TARGET[0]):
+                if l[:4] == "ATOM" and l[21] == FULL_TARGET[1]:
+                    serial += 1
+                    f.write(l[:6] + f"{serial:5d}" + l[11:21] + "B" + l[22:])
+            f.write("TER\n")
+        f.write("END\n")
 
 
 def main():
@@ -131,6 +214,9 @@ def main():
     p.add_argument("--nseq", type=int, default=8)
     p.add_argument("--temp", type=float, default=0.1)
     p.add_argument("--seed", type=int, default=37)
+    p.add_argument("--full-target", action="store_true",
+                   help="pair the binder with the COMPLETE receptor "
+                        "instead of the cropped one used to generate it")
     p.add_argument("--omit", default="XC",
                    help="amino acids to omit; C excluded by default (free "
                         "cysteines in a secreted de novo binder invite "
@@ -162,7 +248,8 @@ def main():
                 continue  # record 0 is the input backbone, not a design
             name = f"{tag}_s{i}"
             try:
-                thread(bb, seq, os.path.join(threaded, name + ".pdb"))
+                thread(bb, seq, os.path.join(threaded, name + ".pdb"),
+                       full_target=args.full_target)
                 n_ok += 1
             except Exception as e:
                 print(f"[thread] {name} FAILED: {e}")

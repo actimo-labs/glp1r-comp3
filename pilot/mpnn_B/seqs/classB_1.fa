@@ -1,0 +1,8 @@
+>classB_1, score=3.0128, global_score=2.4104, fixed_chains=['B'], designed_chains=['A'], model_name=v_48_020, git_hash=8907e6671bfbfc92303b5f79c4b5e6ce47cdef57, seed=37
+HAEGTFTSDGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+>T=0.1, sample=1, score=1.4010, global_score=2.1328, seq_recovery=0.1020
+TAELEFTSLTSQLKEEKAVREFVENRLKKAEEKLEEELKKKKEEAEKLA
+>T=0.1, sample=2, score=1.4184, global_score=2.1345, seq_recovery=0.1020
+DAELDFTSLRSELLEREAVRQFVRQRLERANKELEEKLNAEKLKKELEE
+>T=0.1, sample=3, score=1.4033, global_score=2.1413, seq_recovery=0.1020
+TAEEDFTSERSRELERRAVREWVRQRLERADKRNLERLEAAKAAAEAAA
