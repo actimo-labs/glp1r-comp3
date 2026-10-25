@@ -1,0 +1,36 @@
+{
+  "source_pdb": "target/glp1r_TMD.pdb",
+  "radius": 15.0,
+  "max_gap": 4,
+  "min_len": 5,
+  "segments": {
+    "A": [
+      [
+        136,
+        155
+      ],
+      [
+        187,
+        241
+      ],
+      [
+        280,
+        317
+      ],
+      [
+        361,
+        397
+      ]
+    ]
+  },
+  "residues_kept": 150,
+  "residues_total": 283,
+  "hotspots": [
+    "A299",
+    "A141",
+    "A384",
+    "A298",
+    "A201"
+  ],
+  "contig": "[A136-155/A187-241/A280-317/A361-397/0 60-90]"
+}

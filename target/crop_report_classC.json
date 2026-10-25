@@ -1,0 +1,36 @@
+{
+  "source_pdb": "target/glp1r_ECD.pdb",
+  "radius": 15.0,
+  "max_gap": 4,
+  "min_len": 5,
+  "segments": {
+    "A": [
+      [
+        29,
+        53
+      ],
+      [
+        63,
+        74
+      ],
+      [
+        80,
+        103
+      ],
+      [
+        110,
+        129
+      ]
+    ]
+  },
+  "residues_kept": 81,
+  "residues_total": 101,
+  "hotspots": [
+    "A32",
+    "A68",
+    "A39",
+    "A69",
+    "A35"
+  ],
+  "contig": "[A29-53/A63-74/A80-103/A110-129/0 60-90]"
+}

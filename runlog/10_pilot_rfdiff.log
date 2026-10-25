@@ -1,0 +1,9 @@
+=== classC : 8 designs ===
+classC rc=0  wall=374s  designs=8  per_design=46s
+=== classA : 8 designs ===
+classA rc=0  wall=788s  designs=8  per_design=98s
+
+=== timings ===
+tag     wall_s  n_designs  s_per_design
+classC  374     8          46
+classA  788     8          98
