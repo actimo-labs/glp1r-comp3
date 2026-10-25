@@ -1,0 +1,67 @@
+TM bundle principal axis explains 62% of Ca variance
+extracellular direction set from ECD centroid (52.2 A on the + side)
+
+GLP-1 depth along the same axis (the ruler):
+  GLP-1   7  HIS  depth   31.2 A
+  GLP-1   8  ALA  depth   30.4 A
+  GLP-1   9  GLU  depth   29.3 A
+  GLP-1  10  GLY  depth   26.5 A
+  GLP-1  11  THR  depth   25.7 A
+  GLP-1  12  PHE  depth   25.4 A
+  GLP-1  13  THR  depth   23.5 A
+  GLP-1  14  SER  depth   21.0 A
+  GLP-1  15  ASP  depth   20.6 A
+  GLP-1  16  VAL  depth   20.0 A
+  GLP-1  17  SER  depth   17.6 A
+  GLP-1  18  SER  depth   15.6 A
+  GLP-1  19  TYR  depth   15.2 A
+  GLP-1  20  LEU  depth   14.3 A
+  GLP-1  24  ALA  depth    8.4 A
+  GLP-1  28  PHE  depth    2.4 A
+  GLP-1  32  LEU  depth   -3.5 A
+  GLP-1  36  ARG  depth   -4.4 A
+
+vestibule mouth taken as depth of GLP-1 15: 20.6 A
+deepest GLP-1 residue (His7): 31.2 A
+
+  res   aa   depth  burial  radius  class
+  299  ARG    18.2      95     2.5  rim
+  201  LEU    19.6     151     6.3  rim
+  300  ASN    19.7     143     6.7  deep
+  298  THR    19.7     157     1.0  rim
+  141  LEU    23.7      99    12.9  rim
+  306  TRP    24.0     159     8.4  deep
+  230  PHE    24.3     194     4.1  deep
+  197  LYS    25.1     152     5.0  deep
+  372  ASP    25.7     134    11.4  deep
+  380  ARG    26.8     115    13.7  rim
+  145  TYR    27.8     132    12.8  deep
+  144  LEU    28.7     164    13.2  deep
+  309  ILE    29.0     205     8.6  deep
+  233  MET    29.0     180     2.0  deep
+  234  GLN    29.3     199     5.3  deep
+  194  VAL    30.1     180     6.3  deep
+  384  LEU    30.2     152    11.2  rim
+  310  ARG    30.4     159    11.6  deep
+  148  TYR    33.3     185     9.3  deep
+  388  LEU    33.6     167     8.7  deep
+  237  VAL    34.1     173     2.0  deep
+  387  GLU    35.1     172    10.2  deep
+  190  ARG    35.1     196     1.1  deep
+  313  ILE    35.3     190     8.0  deep
+  152  TYR    36.7     220     6.8  deep
+  391  THR    38.4     193     5.4  deep
+  241  TYR    39.5     196     5.2  deep
+
+rim  (scaffold epitope, depth <= 12 A): [299, 201, 298, 141, 380, 384]
+deep (message-module territory)              : [300, 306, 230, 197, 372, 145, 144, 309, 233, 234, 194, 310, 148, 388, 237, 387, 190, 313, 152, 391, 241]
+lipid-facing (EXCLUDE)                       : []
+
+76 of 283 TMD residues are lipid-facing overall
+
+wrote target/epitope_classes.json
+
+RFdiffusion hotspot string (class A scaffold):
+  ppi.hotspot_res=[A299,A201,A298,A141,A380,A384]
+RFdiffusion hotspot string (class C, ECD groove):
+  ppi.hotspot_res=[A30,A31,A32,A35,A36,A39,A43,A67,A68,A69,A88,A89,A90,A91,A121,A123,A128]
