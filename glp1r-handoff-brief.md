@@ -18,6 +18,7 @@ Labels used throughout: **[OFFICIAL]** = competition rule; **[EVIDENCE]** = publ
 
 - Fresh session. The challenge-02 TNF-α work is a source of reusable *code* (manifest schema, QC, ranking, env), not a template for the *strategy* — the problem is structurally different.
 - **Commit constantly and atomically.** Harjas has explicitly authorised commits. Commit after every meaningful unit: target prep done, a generation batch finished, a filter implemented, a metric computed, a shortlist cut. Message format: `glp1r: <what changed>` plus, where relevant, the counts (`glp1r: RFdiffusion batch 2, 480 backbones, seed 7`).
+- **Commits need no credentials** — they are local. If a commit fails (unset `user.name`/`user.email`, a lock file, a full disk), fix it once if the fix is obvious and trivial, otherwise **log the failure in the run log and carry on with the pipeline**. Never stall the scientific work waiting on git, and never wait for Harjas to approve a commit.
 - Commit the code, configs, manifests, metrics tables, and run logs. Do **not** commit model weights, large PDB trajectory dumps, or raw structure sets over ~50 MB — put those under `.gitignore` and record their paths in the manifest instead.
 - **No pushes to remote, no force-push, no history rewriting, no submission to the competition site without explicit approval from Harjas.** Commits are pre-authorised; everything that leaves the machine is not.
 - Checkpoint every long batch so it resumes rather than restarts. With ~32 hours there is no budget for a lost run.
@@ -115,13 +116,21 @@ Antibody formats: not recommended. CDRs engage surface epitopes, not deep pocket
 
 ---
 
-## 5. Open question that changes the portfolio — needs an answer before Stage 0 scales
+## 5. The de novo boundary on the activation module — DECIDED, proceed on this
 
 The evidence says the reliable route to activation is reproducing GLP-1's N-terminal message (free α-amine into E387, His-Ala-Glu-Gly). The successful ProteinMPNN GLP-1RA campaign (Wei et al., *Adv. Sci.* 2025) fixed 13 conserved GLP-1 positions and redesigned 18, reaching EC50 ~0.011–0.036 nM.
 
-**[OFFICIAL] says de novo designs only.** Grafting GLP-1's N-terminal residues onto a designed scaffold is arguably a violation on a strict reading, and arguably fine on a looser one — the scaffold is genuinely designed, and the motif is a pharmacophore rather than a known binder being mutated. This is a rules question, not a science question.
+**[OFFICIAL] says de novo designs only.** Grafting GLP-1's N-terminal residues verbatim onto a designed scaffold is arguably a violation on a strict reading.
 
-Harjas to ask in the competition Slack. Until it is answered, class B should be built so the message module can be swapped between a GLP-1-derived motif and a fully de novo one without regenerating the scaffolds.
+**Decision, given the time remaining: design the message module de novo at the pharmacophore level.** Reproduce the *interactions*, not the sequence:
+- a free N-terminal α-amine positioned to hydrogen-bond E387(7.42b);
+- an acidic residue placed to reach the positively-charged TM2 extracellular end;
+- small residues where pocket depth demands them;
+- backbone geometry that places the N-terminus at native insertion depth.
+
+Do **not** emit His-Ala-Glu-Gly or any contiguous run matching GLP-1, exendin-4, glucagon or GIP — the de novo check in Stage 3 applies to the message module exactly as it applies to the rest of the design. This is defensible as de novo under the rules, preserves the known activation mechanism, and does not stake six slots on a ruling that may not arrive before the deadline.
+
+Harjas is posting the question in Slack in parallel. **Do not block on it.** Build class B so the message module can be swapped without regenerating scaffolds, so a permissive ruling can be acted on cheaply if one arrives in time.
 
 ---
 
