@@ -1,0 +1,6 @@
+[mpnn] 265 backbones, 4 seqs each -> 1060 designs
+[mpnn] ProteinMPNN 989.2s (0.93s/design)
+[thread] 1060 written, 0 failed, 8.8s
+[out] gen/triage/mpnn/threaded
+[out] gen/triage/mpnn/mpnn_manifest.csv
+MPNN_CA_DONE

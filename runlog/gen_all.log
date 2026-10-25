@@ -1,1 +1,6 @@
 10:07:19 classC len=85 top-up: have 21 of 66
+10:37:02 classC len=85 final: 66
+10:37:02 starting class B
+class B compliant: target=A29-53/A62-129/A136-155/A187-241/A280-317/A361-397
+                   hotspots=[A387,A234,A233,A391,A241] (deep pocket, receptor-derived only)
+=== classB len=90 : 125 designs ===

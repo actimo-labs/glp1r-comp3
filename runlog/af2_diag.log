@@ -1,0 +1,32 @@
+WARNING:tensorflow:From /home/HarjasG/tnf-track3/dl_binder_design/af2_initial_guess/alphafold/model/tf/input_pipeline.py:151: calling map_fn (from tensorflow.python.ops.map_fn) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Use fn_output_signature instead
+[af2ig] backend=gpu devices=[cuda(id=0)]
+[af2ig] 8 designs, 1 distinct lengths -> 1 compiles (~2 min) + ~1 min inference
+The distance between residues 65 and 66 is 17.45 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_21_s3  pae_int=25.46  plddt_binder=93.3  120.8s
+The distance between residues 65 and 66 is 32.08 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_26_s3  pae_int=26.71  plddt_binder=80.9  6.33s
+The distance between residues 65 and 66 is 33.00 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_33_s3  pae_int=27.48  plddt_binder=62.9  6.68s
+The distance between residues 65 and 66 is 15.73 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_35_s2  pae_int=6.39  plddt_binder=92.5  6.2s
+The distance between residues 65 and 66 is 32.06 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_4_s1  pae_int=8.58  plddt_binder=89.9  6.22s
+The distance between residues 65 and 66 is 32.06 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_4_s2  pae_int=26.42  plddt_binder=82.6  6.23s
+The distance between residues 65 and 66 is 32.06 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_4_s4  pae_int=26.90  plddt_binder=67.5  6.22s
+The distance between residues 65 and 66 is 22.97 A > limit 3.0 A.
+I'm going to insert a chainbreak after residue 65
+[af2ig] classCL65_65_s2  pae_int=26.80  plddt_binder=85.3  6.2s
+
+[af2ig] 8 ok, 0 failed, 165.0s total, 20.6s/design
+DIAG_DONE

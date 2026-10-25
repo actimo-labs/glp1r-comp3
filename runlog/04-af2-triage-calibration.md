@@ -113,3 +113,46 @@ this epitope. Boltz-2 does that job.
 Note also `plddt_binder` 92–94 for the non-binders, higher than any of our
 designs. Same lesson as the Boltz calibration: `plddt_binder` tracks foldedness,
 not binding, in both models.
+
+---
+
+# ADDENDUM 2 — scoring class C against the full receptor produced false negatives
+
+Running production triage with the binder threaded onto the **full 384-residue
+receptor**, all 197 scored class C designs failed the cut, best 26.60. The
+pilot, which threaded onto the **isolated 101-residue ECD**, had 7 of 32 pass
+with a best of 17.52. Something was wrong with the representation, not the
+designs.
+
+Diagnostic: the same 8 designs, both ways.
+
+| Design | full receptor | ECD only |
+|---|---|---|
+| classCL65_35_s2 | 27.03 | **6.39** |
+| classCL65_4_s1 | 27.08 | **8.58** |
+| classCL65_21_s3 | 27.09 | 25.46 |
+| classCL65_4_s2 | 26.60 | 26.42 |
+| classCL65_26_s3 | 26.76 | 26.71 |
+| classCL65_65_s2 | 27.05 | 26.80 |
+| classCL65_4_s4 | 26.88 | 26.90 |
+| classCL65_33_s3 | 27.08 | 27.48 |
+
+Two designs scoring **better than the native GLP-1 positive control (17.39)**
+were being reported as complete failures. Adding 283 residues of transmembrane
+domain — which is not part of the class C epitope — pushes the whole complex
+into AF2's GPCR blind spot and the interface signal disappears.
+
+Note how the full-receptor numbers cluster in 26.60–27.09. That is a noise band,
+not a ranking. The 8 designs above were chosen as the "least bad" by
+full-receptor score, i.e. effectively at random, and 2 of 8 turned out to be
+excellent — which implies many more good designs were buried in the other 604.
+
+**Fix.** Class C AF2 triage is run against the **ECD alone**, which is both the
+representation AF2 can handle and the honest target: the class C epitope lies
+entirely within the ECD. Boltz-2 still validates against the complete receptor,
+so TMD clashes would still be caught.
+
+**Generalisation.** The target representation used for scoring must match the
+epitope, not default to "the biggest structure available". Classes A and B
+genuinely need the TMD and are therefore not AF2-scorable at all; class C does
+not, and is.

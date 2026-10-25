@@ -113,18 +113,19 @@ hydra:
     - hydra.run.dir=/work/.hydra
     - hydra.mode=RUN
     task:
-    - inference.output_prefix=/work/gen/rfdiff/classCL85
-    - inference.input_pdb=/work/target/glp1r_classC_crop.pdb
-    - contigmap.contigs=[A29-53/A63-74/A80-103/A110-129/0 85-85]
-    - ppi.hotspot_res=[A32,A68,A39,A69,A35]
-    - inference.num_designs=66
+    - inference.output_prefix=/work/gen/rfdiff/classBL90
+    - inference.input_pdb=/work/target/glp1r_classB2_crop.pdb
+    - contigmap.contigs=[A29-53/A62-129/A136-155/A187-241/A280-317/A361-397/0 90-90]
+    - ppi.hotspot_res=[A387,A234,A233,A391,A241]
+    - inference.num_designs=125
     - denoiser.noise_scale_ca=0
     - denoiser.noise_scale_frame=0
     - inference.write_trajectory=False
   job:
     name: run_inference
     chdir: null
-    override_dirname: contigmap.contigs=[A29-53/A63-74/A80-103/A110-129/0 85-85],denoiser.noise_scale_ca=0,denoiser.noise_scale_frame=0,inference.input_pdb=/work/target/glp1r_classC_crop.pdb,inference.num_designs=66,inference.output_prefix=/work/gen/rfdiff/classCL85,inference.write_trajectory=False,ppi.hotspot_res=[A32,A68,A39,A69,A35]
+    override_dirname: contigmap.contigs=[A29-53/A62-129/A136-155/A187-241/A280-317/A361-397/0
+      90-90],denoiser.noise_scale_ca=0,denoiser.noise_scale_frame=0,inference.input_pdb=/work/target/glp1r_classB2_crop.pdb,inference.num_designs=125,inference.output_prefix=/work/gen/rfdiff/classBL90,inference.write_trajectory=False,ppi.hotspot_res=[A387,A234,A233,A391,A241]
     id: ???
     num: ???
     config_name: base
