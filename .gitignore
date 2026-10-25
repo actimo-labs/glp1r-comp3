@@ -232,3 +232,19 @@ mpnn_out/
 *.ckpt
 *.trr
 *.tar
+
+# --- bulk run artifacts (brief section 0: no large PDB trajectory dumps) ---
+# RFdiffusion writes a per-design *_traj.pdb of every denoising step. These are
+# ~8 MB each and are pure diagnostics. 405 MB of them were committed before
+# this rule existed; untracked in the same commit that added this line.
+traj/
+*_traj.pdb
+*.trb
+gen/rfdiff/*.pdb
+gen/triage/
+pilot/*/threaded/
+pilot/af2_*_out/
+pilot/boltz/boltz_results_yaml/
+controls/boltz_negbind/boltz_results_yaml/
+controls/af2_negbind_out/
+schedules/
