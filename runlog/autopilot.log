@@ -1,1 +1,46 @@
 [13:25:26] waiting for class B generation and class C AF2
+[17:47:27] prerequisites finished
+[17:47:27] === class B interface QC ===
+
+201/250 pass  ->  gen/rfdiff/interface_qc_classB.csv
+  ok         124
+  ok-offtarget 77
+  LIPID      25
+  NOCONTACT  24
+[17:48:28] === stage class B survivors ===
+  class B: 201/250 staged
+[17:48:28] === ProteinMPNN on class B ===
+[mpnn] ProteinMPNN 1025.2s (1.28s/design)
+[thread] 804 written, 0 failed, 7.7s
+[out] gen/triage/mpnn_B/threaded
+[out] gen/triage/mpnn_B/mpnn_manifest.csv
+[18:06:32] === merge manifests ===
+  1864 sequences total
+[18:06:32] === de novo check (all classes) ===
+wrote gen/triage/denovo_all.csv
+
+FAILED: 462 violation(s)
+[18:44:54] === select Boltz shortlist ===
+  class A:   448 candidates -> 40 shortlisted from 24 distinct backbones
+  class B:   803 candidates -> 100 shortlisted from 57 distinct backbones
+  class C:   145 candidates -> 60 shortlisted from 43 distinct backbones
+
+200 shortlisted -> gen/triage/boltz_shortlist.csv
+552 rejected    -> gen/triage/rejected_log.csv
+Boltz cost at 2 seeds, 26.1 s/design: 2.9 h
+[18:44:54] === Boltz-2 on the shortlist ===
+classAL75_17_s1              9.35        80.3      0.896
+classAL75_19_s1              9.39        87.7      0.886
+classAL75_35_s1              9.60        79.8      0.904
+classAL65_9_s2               9.66        80.1      0.807
+classAL75_35_s4              9.89        73.0      0.889
+classAL85_2_s3               9.95        81.2      0.816
+classAL75_19_s3             10.00        83.2      0.894
+classAL85_39_s4             10.16        80.0      0.859
+classAL85_37_s3             10.45        76.2      0.795
+classAL85_26_s4             10.54        83.5      0.739
+
+wrote gen/boltz/boltz_scores.csv
+[19:36:12] === AUTOPILOT COMPLETE ===
+[19:36:12] next: rank + build submission (needs review, not automated)
+AUTOPILOT_DONE

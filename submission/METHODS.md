@@ -87,11 +87,15 @@ rejected, since they cannot bind in a detergent micelle.
 
 ## 4. Design classes
 
-| Class | Epitope | Length | Slots |
-|---|---|---|---|
-| A | vestibule rim (TMD) | 65/75/85 | 4 |
-| B | deep orthosteric pocket | 90/110 | 10 |
-| C | ECD peptide-binding groove | 65/75/85 | 6 |
+| Class | Epitope | Length | Generated | **Submitted** |
+|---|---|---|---|---|
+| A | vestibule rim (TMD) | 65/75/85 | 120 | **10** |
+| B | deep orthosteric pocket | 90/110 | 250 | **0 — see §5a** |
+| C | ECD peptide-binding groove | 65/75/85 | 198 | **10** |
+
+The planned allocation was 4A / 10B / 6C. It did not survive validation: class B
+failed self-consistency completely and was dropped, and class A turned out to be
+the architecture that engages the activation trigger. Final split is 10A / 10C.
 
 Binder lengths are **discrete, not sampled from a range**. JAX retraces AF2 for
 every new complex length — measured 122 s on a new shape vs 10.5 s on a repeat —
@@ -176,6 +180,53 @@ binder–target pair. Used as a secondary with that reasoning stated.
 
 ---
 
+## 5a. Self-consistency — the gate that decided the submission
+
+Boltz pins the receptor to a template but **re-predicts the binder pose**. A
+good interface score therefore means either "binds as designed" or "Boltz found
+some other pose it likes", and the brief's own benchmark warns that Boltz
+confidence overestimates correctness for misplaced binders.
+
+Separating those: superpose the predicted receptor onto the design's receptor,
+then measure how far the binder moved.
+
+| Class | binder RMSD vs design (median) | self-consistent (<5 Å) |
+|---|---|---|
+| C | **2.5 Å** | **52 / 60** |
+| A | **3.1 Å** | **25 / 40** |
+| B | **64.8 Å** | **0 / 100** |
+
+**Class B was eliminated by this gate.** Its Boltz interface scores looked
+survivable (7 of 100 under the PAE cut), but the predicted poses are ~65 Å from
+the designed ones. Inspecting the best five: two are placed at 48–67 Å depth,
+i.e. against the **intracellular** face, and the rest contact 59–76 receptor
+residues spanning residues 29–392 — draped across the whole protein. Neither is
+a credible binding mode. Submitting them would have meant 10 near-certain
+non-binders selected on a confidence score that self-consistency contradicts.
+
+A contributing weakness: the class B designed interfaces were thin to begin with
+(6–23 contacts for a 90–110 aa binder). The interface-QC floor of ≥4 contacts was
+calibrated on 65–85 aa binders and was too permissive for longer ones.
+
+### Class A reaches the activation trigger — correcting §3
+
+§3 concluded that a folded scaffold could not reach E387 at 35.1 Å. That was
+measured on **backbone** geometry, and the RFdiffusion designs are backbone-only
+poly-glycine. Modelled with side chains, which extend ~5 Å further, **7 of the
+10 submitted class A designs contact E387**, and most also contact Q234, M233,
+T391 and Y241 — at binder RMSD 1.0–3.2 Å from the design, so this is the
+designed pose with side chains, not a different complex.
+
+The depth analysis was too pessimistic by roughly one side-chain length. The
+class A target crop retained residues 187–241 and 361–397, so the deep pocket
+was present during generation even though the hotspots named only the rim.
+
+This is the campaign's main scientific surprise: the architecture built *for*
+the deep pocket (B) failed, and the one built for the rim (A) reached the
+trigger. Stated plainly because it was not predicted.
+
+---
+
 ## 6. Deviations forced by the environment
 
 **No PyRosetta licence.** Consequences, all real:
@@ -231,13 +282,25 @@ Known binders are used only where FAQ 8 permits: as calibration controls.
 
 ## 8. Ranking rubric
 
-1. **Boltz-2 `pae_interaction`** ascending — primary, the only metric that
-   separates our designs from folded non-binders.
-2. **`ipTM`** descending — secondary.
-3. Class prior: within comparable scores, class B ranks above C above A,
-   because the competition requires a winner to both bind *and* activate, and
-   only class B reaches the activation trigger.
-4. At most 2 sequences per backbone, and no pair above 70% identity.
+Gates first, all of which a design must clear:
+
+1. **self-consistency** — binder RMSD < 5 Å between prediction and design
+2. **Boltz interface** — `pae_interaction` < 20.0 and `ipTM` > 0.56
+3. **epitope** — interface not predominantly lipid-facing
+4. **de novo** — no run > 5 residues matching a natural incretin peptide
+
+Then ranked on `pae_interaction` ascending, `ipTM` descending as tie-break.
+`plddt_binder` is **not** used: it was shown three separate times to track
+foldedness rather than binding.
+
+**Per-class quotas, 10 A and 10 C, rather than one global ranking.** Ranking
+globally put 19 of 20 slots on class A. Two reasons to split instead: the
+competition states that binding at the peptide groove (the ECD — class C)
+counts in a design's favour, and a single-epitope submission fails entirely if
+class A's predicted insertion turns out to be an artefact.
+
+At most 2 sequences per backbone, no pair above 70% identity. The submitted 20
+come from **20 distinct backbones**.
 
 ---
 
