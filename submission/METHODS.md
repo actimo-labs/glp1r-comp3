@@ -150,6 +150,24 @@ native agonist uses, contact the residue whose engagement initiates activation,
 and do so on an epitope that is state-dependent. Whether that produces signalling
 is for the reporter assay.
 
+### Molecule class
+
+All 20 are submitted as `molecule_class = single_chain`. This was verified
+against the definition of the alternatives rather than inferred from how they
+were made:
+
+| Evidence | These designs | A nanobody (VHH) |
+|---|---|---|
+| secondary structure (Cα-based, mean) | **87% helix, 0% strand** | ~45–50% strand, <5% helix |
+| length | 65–85 aa | typically 110–130 aa |
+| cysteines | **0 in every design** | ≥2 for the invariant Ig disulfide |
+| framework motifs (`QVQLVESGGG`, `WYRQ`, `YYCA`, `WGQGT`) | **none** | all characteristic |
+
+A nanobody is an immunoglobulin β-sandwich; these are α-helical bundles — the
+opposite fold. ProteinMPNN was additionally run with `--omit_AAs XC`, so the
+canonical Ig disulfide was not buildable by construction. No sequence contains
+a colon, so none can be misparsed as an scFv/Fab `{VH}:{VL}` pair.
+
 ---
 
 ## 5. Filters and thresholds, with provenance
