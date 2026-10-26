@@ -1,6 +1,6 @@
 # GLP1R Track 3 — Methods
 
-Anthropic × Adaptyv Challenge 03. Single A100-80GB, ~32 h wall clock.
+Anthropic × Adaptyv Challenge 03. Single A100-80GB.
 
 Numbers below are **measured on this machine** unless explicitly marked as an
 estimate. Where a published threshold was not reproducible here, that is stated
@@ -12,9 +12,9 @@ rather than papered over.
 
 | Component | Version / provenance |
 |---|---|
-| RFdiffusion | Docker `rosettacommons/rfdiffusion:latest`, image `33d504109509`, internal commit `fa340147b9006156b251d1ad0391e3ea8e5f73eb` (2025-06-22) |
+| RFdiffusion | Docker `rosettacommons/rfdiffusion:latest`, image `33d504109509` |
 | RFdiffusion weights | `Complex_base_ckpt.pt`, shipped in the image (2023-03-30) |
-| ProteinMPNN | `8907e6671bfbfc92303b5f79c4b5e6ce47cdef57` (2023-06-27), **soluble** weights `v_48_020` |
+| ProteinMPNN |  (2023-06-27), **soluble** weights `v_48_020` |
 | AF2-initial-guess | `nrbennet/dl_binder_design` `cafa3853`, forked to remove PyRosetta (see §6) |
 | AF2 weights | `params_model_1_ptm.npz` (2021-07-19) |
 | Boltz-2 | pip `boltz` 2.2.1, checkpoints `boltz2_conf`, `boltz2_aff` |
