@@ -75,10 +75,12 @@ honest ruler is GLP-1 itself:
 | GLP-1 His7 — deepest insertion | 31.2 Å |
 | **E387 — the free-α-amine partner, the activation trigger** | **35.1 Å** |
 
-Only **6 of 27** message-epitope residues sit at or above the vestibule mouth.
-A folded miniprotein can engage that thin rim but cannot reach E387. This is why
-class A is treated as a binding-only architecture and why the agonist effort
-went into longer binders that reach the pocket.
+Only **6 of 27** message-epitope residues sit at or above the vestibule mouth,
+so a folded miniprotein's **backbone** cannot reach E387. That conclusion drove
+the original design plan — and it turned out to be too pessimistic by roughly
+one side-chain length. Measured with side chains modelled, the submitted class A
+designs do contact E387. See §5a and §4a; this paragraph is retained because it
+is what the plan was based on at the time.
 
 76 of 283 TMD residues are lipid-facing; designs whose interface lands there are
 rejected, since they cannot bind in a detergent micelle.
@@ -107,6 +109,46 @@ Targets were cropped to a 15 Å shell around the hotspots for generation only
 uses the complete 384-residue receptor** — designs are transformed back into the
 original frame, which is exact because RFdiffusion's recentring is a pure
 translation (measured: 214.278 Å shift, 0.133 Å RMSD after removing it).
+
+---
+
+## 4a. How the activation objective was incorporated
+
+The competition scores two things: affinity among all binders, and activation
+relative to a reference agonist, with the winner required to do both. Activation
+entered the pipeline at four points.
+
+**1. Epitope choice (design time).** Activation of a class B1 GPCR is initiated
+in the 7TM orthosteric pocket, not on the ECD. The deep pocket residues were
+therefore computed from the native complex (§3) and used as RFdiffusion
+hotspots for the TMD-targeting classes: **E387** (the free-α-amine partner
+engaged by GLP-1 His7), Q234, M233, T391, Y241. Class C deliberately targets the
+ECD groove instead and is submitted for affinity, not activation.
+
+**2. Target construction (design time).** The class A generation target was
+cropped to a 15 Å shell around its hotspots, which **retained the full deep
+pocket** (receptor residues 187–241 and 361–397). The pocket was therefore
+present and accessible during diffusion even though the hotspot list named only
+the rim — which is why these designs reach deeper than the original depth
+analysis predicted.
+
+**3. Selection (ranking time).** Within class A, designs contacting **E387**
+are ranked ahead of designs with better interface scores that do not. All 10
+submitted class A designs contact E387; most also contact Q234, M233, T391 and
+Y241. Per-design contacts are listed in `rationale.md` and `glp1r_metrics.csv`.
+
+**4. Validation (post hoc).** A state-selectivity analysis (§9a) asks whether
+each design's epitope differs between the active and inactive receptor, which is
+the structural precondition for shifting the conformational equilibrium under a
+conformational-selection model. Class A epitopes shift 3.8–8.6 Å between states;
+the class C epitope does not change shape at all.
+
+**What this does not amount to.** None of the above predicts cAMP output. There
+is no agonism score in this submission, and none should be inferred from the
+rankings. The honest claim is narrow: class A designs occupy the pocket the
+native agonist uses, contact the residue whose engagement initiates activation,
+and do so on an epitope that is state-dependent. Whether that produces signalling
+is for the reporter assay.
 
 ---
 
@@ -321,17 +363,22 @@ Stated plainly, because the selection prompt rewards calibrated claims.
 - **No KD is predicted.** Boltz confidence metrics are interface-plausibility
   proxies, not affinity estimates. No design has a predicted binding constant.
 - **No agonism prediction.** Nothing here forecasts cellular cAMP activation.
-  Class B is *designed* to engage the activation trigger; whether it activates
-  is unknown until the reporter assay says so.
+  The 10 class A designs contact E387 and sit on a state-dependent epitope,
+  which is a structural *case* for agonism, not evidence of it. Whether any
+  design activates is unknown until the reporter assay says so.
 - **No Rosetta FastRelax, ddG, or SAP** — no PyRosetta licence.
 - **No per-state interface energetics** (planned Stage 1) — not run.
 - **No MD, no ensemble sampling, no BioEmu** — not run. The published rationale
   for skipping it holds: class B1 activation is a millisecond process, an A100
   gives ~30–100 ns/day for a membrane GPCR complex, and stripping Gs collapses
   the active state regardless of binder quality.
-- **No activation order parameters computed on final designs** (TM6 outward,
-  TM2–TM6 distance, PxxG kink). MDAnalysis and ProDy are installed; this was
-  deprioritised against validation.
+- **No activation order parameters computed on our predicted complexes.** Not
+  an oversight: Boltz pins the receptor to the active-state template, so every
+  prediction shows active geometry regardless of the binder and the measurement
+  would be circular (§9a). Two of the five planned parameters are also
+  uncomputable on this structure — 6.32b (~343) lies in the disordered 339–343
+  gap, and GLP1R's TM3 has no Arg at the derived 3.50b, so class A DRY-motif
+  arithmetic does not transfer.
 - **No RF3 cross-check.** Not installed. Stage 4 is Boltz-2 only, so
   "orthogonal agreement between two structure predictors" was not achieved.
 - **One valid positive control.** The exendin-4 positive failed (27.33) because

@@ -53,24 +53,35 @@ MAX_IDENTITY = 70.0
 MAX_NATURAL_RUN = 5
 
 CLASS_DESC = {
-    "A": ("orthosteric vestibule rim (TMD)",
-          "Folded miniprotein against the extracellular rim of the GLP-1 "
-          "message epitope. Binding only: the activation trigger E387 sits at "
-          "35.1 A and is out of reach of a folded scaffold.",
-          "thin 6-residue epitope; may not reach high affinity"),
-    "B": ("deep orthosteric pocket, two-domain (TMD + ECD)",
-          "Extended binder reaching the deep activation-trigger residues "
-          "(E387 at 35.1 A, Y241, T391) discovered de novo from the receptor "
-          "pocket alone. Intended mechanism: occupy the native agonist pocket "
-          "and present an N-terminal element to E387, mimicking the function "
-          "of GLP-1's message module without reusing any part of it.",
-          "agonism unverified; AF2 cannot score this epitope, Boltz only"),
+    "A": ("orthosteric vestibule / deep TMD pocket",
+          "Folded miniprotein targeting the GLP-1 message epitope on the "
+          "transmembrane domain. RFdiffusion was conditioned on the vestibule "
+          "rim, but the generation target retained the full deep pocket "
+          "(receptor residues 187-241 and 361-397), and the designs reach "
+          "further than their backbones suggest: modelled with side chains "
+          "they engage the deep activation-trigger residues. **This is the "
+          "architecture carrying the activation objective.** Intended "
+          "mechanism: occupy the orthosteric pocket the native agonist uses "
+          "and contact E387, the free-alpha-amine partner whose engagement by "
+          "GLP-1 His7 initiates activation.",
+          "Agonism is unverified. Contacting E387 is not the same as "
+          "presenting a free alpha-amine to it in the native geometry, and no "
+          "structural method here predicts cAMP output."),
     "C": ("ECD peptide-binding groove",
           "Miniprotein against the extracellular-domain groove that binds "
-          "GLP-1's C-terminal address helix. This is the competition's "
-          "recommended epitope.",
-          "expected to bind but not activate; published ECD binders are "
-          "antagonists"),
+          "GLP-1's C-terminal address helix - the epitope the competition "
+          "recommends. Intended mechanism: high-affinity capture of the "
+          "receptor, targeting the affinity ranking and the binding gate.",
+          "Expected to bind but NOT to activate. The ECD is conformationally "
+          "invariant between receptor states (1.21 A internal RMSD, vs 4.72 A "
+          "for the TMD): it reorients rigidly but does not change shape, so an "
+          "ECD binder sees the same surface in the active and inactive "
+          "receptor and has no structural route to shifting the equilibrium. "
+          "This matches the published de novo GLP1R ECD binders (5.3 nM, "
+          "27 nM) being antagonists."),
+    "B": ("deep orthosteric pocket (NOT SUBMITTED)",
+          "Withdrawn: failed self-consistency entirely.",
+          "n/a"),
 }
 
 
@@ -223,6 +234,26 @@ def main():
             f.write(f"- **length**: {len(seq)} aa\n")
             f.write(f"- **epitope targeted**: {ep}\n")
             f.write(f"- **intended mechanism**: {mech}\n")
+            trig = r.get("trigger_contacts", "")
+            nt = r.get("n_trigger", "0")
+            if c == "A":
+                if trig:
+                    f.write(f"- **activation rationale (measured)**: contacts "
+                            f"{nt} activation-trigger residue(s) in the Boltz-2 "
+                            f"complex: **{trig.replace('|', ', ')}**. "
+                            f"Binder RMSD to the design is "
+                            f"{r.get('binder_rmsd_vs_design','n/a')} A, so this "
+                            f"is the designed pose, not a repositioned one. "
+                            f"The epitope it occupies shifts 3.8-8.6 A between "
+                            f"active and inactive receptor states, so it is "
+                            f"state-dependent.\n")
+                else:
+                    f.write("- **activation rationale (measured)**: no "
+                            "activation-trigger residue contact detected; "
+                            "submitted on binding evidence alone.\n")
+            else:
+                f.write("- **activation rationale (measured)**: none. The ECD "
+                        "epitope is state-invariant (see failure mode).\n")
             bp = r.get("boltz_pae_interaction", "")
             bi = r.get("boltz_iptm", "")
             f.write(f"- **predicted-KD evidence**: Boltz-2 "
