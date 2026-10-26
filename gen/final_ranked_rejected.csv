@@ -1,9 +1,23 @@
 design,reason
-classAL85_22_s2,seed-unstable: |delta pae| 5.4
-classAL75_33_s4,identity >70% vs classAL75_33_s3
-classAL85_2_s3,identity >70% vs classAL85_2_s4
-classCL65_16_s1,seed-unstable: |delta pae| 8.85
-classCL75_63_s2,seed-unstable: |delta pae| 6.33
-classCL85_18_s1,seed-unstable: |delta pae| 4.31
-classCL85_42_s1,seed-unstable: |delta pae| 4.43
-classCL75_2_s3,seed-unstable: |delta pae| 3.42
+classAL75_33_s3,pose divergent across seeds: 8.38 A
+classAL85_3_s1,pose divergent across seeds: 9.01 A
+classAL75_33_s4,pose divergent across seeds: 16.95 A
+classAL75_35_s4,pose divergent across seeds: 17.0 A
+classAL75_19_s3,pose divergent across seeds: 27.83 A
+classAL85_2_s3,pose divergent across seeds: 18.15 A
+classAL85_4_s4,pose divergent across seeds: 22.53 A
+classAL85_26_s4,pose divergent across seeds: 24.03 A
+classAL75_22_s3,pose divergent across seeds: 19.15 A
+classAL85_22_s2,pose divergent across seeds: 24.3 A
+classAL75_11_s1,pose divergent across seeds: 24.22 A
+classCL65_35_s4,pose divergent across seeds: 37.08 A
+classCL65_16_s1,pose divergent across seeds: 33.56 A
+classCL75_63_s2,pose divergent across seeds: 11.08 A
+classCL65_64_s2,pose divergent across seeds: 16.73 A
+classCL85_18_s1,pose divergent across seeds: 29.06 A
+classCL85_42_s1,pose divergent across seeds: 10.56 A
+classCL65_61_s4,pose divergent across seeds: 40.7 A
+classCL85_45_s2,pose divergent across seeds: 32.33 A
+classCL85_47_s3,pose divergent across seeds: 35.19 A
+classCL65_36_s4,pose divergent across seeds: 33.92 A
+classCL65_35_s1,pose divergent across seeds: 11.12 A

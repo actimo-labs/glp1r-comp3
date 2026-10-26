@@ -207,9 +207,9 @@ def main():
 
     # ---- metrics -------------------------------------------------------
     met = os.path.join(args.out, "glp1r_metrics.csv")
-    keys = ["design", "class", "length", "mpnn_score", "n_contact_res",
-            "hotspots_engaged", "lipid_frac", "af2_pae_interaction",
-            "boltz_pae_interaction", "boltz_iptm", "boltz_plddt_binder"]
+    keys = ["design", "class", "length", "boltz_pae_interaction", "boltz_iptm",
+            "binder_rmsd_vs_design", "pose_rmsd_seeds", "pose_reproducible",
+            "delta_pae_seeds", "n_contacts_pred", "trigger_contacts", "n_trigger"]
     with open(met, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=keys, extrasaction="ignore")
         w.writeheader()
@@ -254,6 +254,14 @@ def main():
             else:
                 f.write("- **activation rationale (measured)**: none. The ECD "
                         "epitope is state-invariant (see failure mode).\n")
+            pr = r.get("pose_rmsd_seeds", "")
+            rep = r.get("pose_reproducible", "")
+            f.write(f"- **pose reproducibility**: two independent Boltz seeds "
+                    f"place the binder {pr} A apart after superposing on the "
+                    f"receptor (**{rep}**). Designs whose pose moved more than "
+                    f"8 A between seeds were excluded from the submission "
+                    f"entirely. Note that score agreement between seeds does "
+                    f"NOT imply pose agreement - this is measured separately.\n")
             bp = r.get("boltz_pae_interaction", "")
             bi = r.get("boltz_iptm", "")
             f.write(f"- **predicted-KD evidence**: Boltz-2 "

@@ -222,7 +222,48 @@ binder–target pair. Used as a secondary with that reasoning stated.
 
 ---
 
-## 5a. Self-consistency — the gate that decided the submission
+## 5a. Pose reproducibility across seeds — and why score stability is not enough
+
+Boltz is stochastic. Running it twice gives two independent placements of the
+binder, and comparing them is a direct test of whether a predicted pose is
+reproducible at all.
+
+**Score agreement does not imply pose agreement.** This was measured, not
+assumed, and it was the most surprising result of the validation:
+
+| Design | Δpae between seeds | binder pose RMSD between seeds |
+|---|---|---|
+| `classCL65_35_s4` | **0.03** | **37.1 Å** |
+| `classAL75_33_s3` | 0.71 | 8.4 Å |
+| `classAL85_2_s4` | 0.27 | 1.7 Å |
+
+Two seeds can agree on interface confidence to within 0.03 while placing the
+binder 37 Å apart. An earlier version of this submission used a
+seed-**stability** gate on |Δpae|, which measured the wrong quantity and would
+have ranked `classAL75_33_s3` first despite its pose not reproducing.
+
+**Across the 46-design two-seed pool:**
+
+| Pose RMSD between seeds | Count |
+|---|---|
+| < 3 Å (reproducible) | 10 |
+| 3–8 Å (partial) | 14 |
+| > 8 Å (divergent) | 22 |
+
+Only 10 of 46 predicted poses reproduce. **The 22 divergent designs were
+excluded from the submission outright.** The submitted 20 are ordered with all
+10 reproducible designs first (ranks 1–10), then 10 partial (ranks 11–20), and
+`pose_rmsd_seeds` / `pose_reproducible` are reported per design in
+`glp1r_metrics.csv` and `rationale.md`.
+
+This is the strongest statement available about positional correctness, and it
+is still a statement about *reproducibility*, not about truth: two seeds of the
+same model agreeing does not make the pose right. No orthogonal structure
+predictor was available (§9).
+
+---
+
+## 5c. Self-consistency — the gate that decided the submission
 
 Boltz pins the receptor to a template but **re-predicts the binder pose**. A
 good interface score therefore means either "binds as designed" or "Boltz found
@@ -326,16 +367,19 @@ Known binders are used only where FAQ 8 permits: as calibration controls.
 
 Gates first, all of which a design must clear:
 
+0. **pose reproducibility** — binder pose RMSD < 8 Å between two independent
+   Boltz seeds. 22 of 46 candidates failed this and were excluded (§5a).
 1. **self-consistency** — binder RMSD < 5 Å between prediction and design
 2. **Boltz interface** — `pae_interaction` < 20.0 and `ipTM` > 0.56
 3. **epitope** — interface not predominantly lipid-facing
 4. **de novo** — no run > 5 residues matching a natural incretin peptide
 
 Scores are the **mean of two Boltz seeds**, not one. Single-seed ranking proved
-noisy enough to matter: across the shortlist the mean |Δpae| between seeds was
-1.91 with a maximum of 8.85, and two designs that ranked in the top 7 on seed 1
-fell outside it on the two-seed mean. A seed-stability gate (|Δpae| < 3) is
-applied, and all 20 submitted designs clear it.
+noisy: mean |Δpae| between seeds was 1.91, maximum 8.85.
+
+Ranking is tiered by **pose reproducibility first** (§5a), then by score within
+tier. Ranks 1–10 reproduce their pose across seeds (< 3 Å); ranks 11–20 are
+partial (3–8 Å). Designs whose pose diverged by more than 8 Å were excluded.
 
 Then ranked on mean `pae_interaction` ascending, `ipTM` descending as tie-break.
 `plddt_binder` is **not** used: it was shown three separate times to track
@@ -381,6 +425,17 @@ Stated plainly, because the selection prompt rewards calibrated claims.
   arithmetic does not transfer.
 - **No RF3 cross-check.** Not installed. Stage 4 is Boltz-2 only, so
   "orthogonal agreement between two structure predictors" was not achieved.
+- **No orthogonal structure predictor.** Pose reproducibility is measured
+  between two seeds of the *same* model (Boltz-2). Agreement between seeds of
+  one model is weaker evidence than agreement between two independent models,
+  and RF3 was not installed (see below).
+- **Target sequence.** Designs were made against **PDB 6X18 chain R**, not the
+  UniProt sequence directly. 6X18 chain R differs from UniProt P43220 at
+  **one position: L260F**, presumably a construct mutation for structure
+  determination. Residue 260 sits at 58 Å depth on the intracellular side, is
+  not a hotspot, does not contact native GLP-1, and **no submitted design comes
+  within 28 Å of it**, so the difference cannot affect any designed interface.
+  The assay construct's own thermostabilising mutations are undisclosed.
 - **One valid positive control.** The exendin-4 positive failed (27.33) because
   it was threaded onto GLP-1's backbone rather than its own — a non-native
   pairing. The calibration ceiling rests on a single positive.
