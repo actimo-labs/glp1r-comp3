@@ -263,6 +263,43 @@ predictor was available (§9).
 
 ---
 
+## 5b. Physical plausibility of the predicted pose
+
+Confidence and reproducibility say nothing about whether a pose is physically
+possible in *this* assay. Three target-specific checks:
+
+**Membrane penetration.** GLP1R sits in a DDM/CHS micelle and a soluble binder
+cannot bury itself in the detergent phase. The membrane slab was estimated from
+the **TMD Cα only** — including the ECD skews the principal axis and misplaces
+the slab badly enough to report ECD binders as lipid-embedded, which is
+geometrically impossible. On the correct slab:
+
+| Class | atoms inside the slab | of those, in lipid (>8 Å from any receptor atom) |
+|---|---|---|
+| A | 54–94 | **0** |
+| C | 0 | 0 |
+
+Class A designs descend the **aqueous vestibule**, surrounded by receptor
+protein the whole way — the same route GLP-1 takes. None occupies lipid. Class C
+binds the ECD, entirely above the membrane.
+
+**C-terminus accessibility — an assay-format constraint.** The design is
+immobilised on the chip via a **C-terminal Twin-Strep tag**, with receptor in
+solution. If the C-terminus is buried in the interface, immobilising it risks
+the tag being inaccessible or sterically blocking the interaction being
+measured. C-terminus distance to the receptor is therefore reported per design
+and used as the **primary ranking tier**.
+
+**19 of the 20 submitted designs have a free C-terminus** (6.4–30.6 Å from the
+receptor). One, `classCL85_40_s2` at 3.1 Å, is retained but ranked **last** and
+flagged in `glp1r_metrics.csv` and `rationale.md`. Earlier rankings contained
+five such designs, including at ranks 4 and 5.
+
+**Interpenetration.** Severe clashes (<2.2 Å) are 0–5 heavy-atom pairs across
+all 20 — consistent with normal close packing, no interpenetration.
+
+---
+
 ## 5c. Self-consistency — the gate that decided the submission
 
 Boltz pins the receptor to a template but **re-predicts the binder pose**. A
@@ -367,7 +404,9 @@ Known binders are used only where FAQ 8 permits: as calibration controls.
 
 Gates first, all of which a design must clear:
 
-0. **pose reproducibility** — binder pose RMSD < 8 Å between two independent
+0. **C-terminus accessible** — ≥5 Å from the receptor, so the Twin-Strep tag
+   used for chip immobilisation is free (§5b). Primary ranking tier.
+0b. **pose reproducibility** — binder pose RMSD < 8 Å between two independent
    Boltz seeds. 22 of 46 candidates failed this and were excluded (§5a).
 1. **self-consistency** — binder RMSD < 5 Å between prediction and design
 2. **Boltz interface** — `pae_interaction` < 20.0 and `ipTM` > 0.56

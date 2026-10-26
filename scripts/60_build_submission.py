@@ -209,7 +209,8 @@ def main():
     met = os.path.join(args.out, "glp1r_metrics.csv")
     keys = ["design", "class", "length", "boltz_pae_interaction", "boltz_iptm",
             "binder_rmsd_vs_design", "pose_rmsd_seeds", "pose_reproducible",
-            "delta_pae_seeds", "n_contacts_pred", "trigger_contacts", "n_trigger"]
+            "cterm_dist_to_receptor", "cterm_accessible",
+            "n_contacts_pred", "trigger_contacts", "n_trigger"]
     with open(met, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=keys, extrasaction="ignore")
         w.writeheader()
@@ -254,6 +255,21 @@ def main():
             else:
                 f.write("- **activation rationale (measured)**: none. The ECD "
                         "epitope is state-invariant (see failure mode).\n")
+            cd_ = r.get("cterm_dist_to_receptor", "")
+            cacc = r.get("cterm_accessible", "")
+            if cacc == "BURIED":
+                f.write(f"- **immobilisation risk**: the C-terminus sits "
+                        f"{cd_} A from the receptor in the predicted complex. "
+                        f"The design is immobilised on the chip via a "
+                        f"C-terminal Twin-Strep tag, so a buried C-terminus "
+                        f"risks the tag being inaccessible or immobilisation "
+                        f"sterically blocking the interaction. **Flagged; "
+                        f"ranked last for this reason.**\n")
+            else:
+                f.write(f"- **immobilisation geometry**: C-terminus is "
+                        f"{cd_} A from the receptor, pointing away from the "
+                        f"interface, so the C-terminal Twin-Strep tag is free "
+                        f"for chip capture.\n")
             pr = r.get("pose_rmsd_seeds", "")
             rep = r.get("pose_reproducible", "")
             f.write(f"- **pose reproducibility**: two independent Boltz seeds "
