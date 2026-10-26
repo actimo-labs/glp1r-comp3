@@ -7,7 +7,12 @@ runlog/06-submission-spec.md), not assumed:
 
     name            unique identifier
     sequence        the designed protein sequence
-    molecule_class  one of protein | nanobody | scfv | fab_kappa | fab_lambda
+    molecule_class  one of single_chain | nanobody | scfv | fab_kappa | fab_lambda
+                    (optional column; ours are all single_chain. NOTE: an
+                    earlier version wrote "protein", which is NOT an accepted
+                    value -- it came from a paraphrased FAQ fetch rather than
+                    the upload form itself.)
+                    scFvs and Fabs are submitted as one sequence "{VH}:{VL}".
 
 CSV must be **ordered by rank, top row highest**. Methods, metrics and
 structure models are optional but encouraged, so we emit them alongside.
@@ -186,7 +191,7 @@ def main():
         w = csv.writer(f)
         w.writerow(["name", "sequence", "molecule_class"])
         for name, seq, _ in designs:
-            w.writerow([name, seq, "protein"])
+            w.writerow([name, seq, "single_chain"])
     print(f"\nwrote {sub}  ({len(designs)} rows, rank order preserved)")
 
     # ---- metrics -------------------------------------------------------

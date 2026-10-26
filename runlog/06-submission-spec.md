@@ -12,7 +12,17 @@ Ordered by rank, **top row = highest ranked**. Minimum columns:
 |---|---|
 | `name` | unique identifier |
 | `sequence` | the designed protein sequence |
-| `molecule_class` | `protein` (options: protein, nanobody, scfv, fab_kappa, fab_lambda) |
+| `molecule_class` | `single_chain` (options: single_chain, nanobody, scfv, fab_kappa, fab_lambda) |
+
+`molecule_class` is an optional column and can also be set per design after
+upload. scFvs and Fabs are submitted as a single sequence written `{VH}:{VL}`;
+ours are all single-chain proteins so no colon appears in any sequence.
+
+**Correction, 2026-10-26.** An earlier version of this file recorded the first
+accepted value as `protein`. That was wrong — it came from a paraphrased fetch
+of the FAQ rather than the upload form itself, and `protein` is not an accepted
+value. The correct value is `single_chain`, confirmed by Harjas against the
+form. All 20 designs were rewritten accordingly.
 
 Methods, metrics and structure models are optional but encouraged — we supply them.
 
